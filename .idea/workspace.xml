@@ -24,25 +24,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="agentSummary.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="agentSummary.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public_html/agentSummary/agentSummary.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="379" column="54" selection-start-line="379" selection-start-column="40" selection-end-line="379" selection-end-column="54" />
+            <state relative-caret-position="229">
+              <caret line="352" column="28" selection-start-line="352" selection-start-column="28" selection-end-line="352" selection-end-column="28" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#5;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#5;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#5;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#5;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#5;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#div#5;n#body#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="agentSummary.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="agentSummary.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_html/agentSummary/agentSummary.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="400" column="98" selection-start-line="400" selection-start-column="98" selection-end-line="400" selection-end-column="98" />
+            <state relative-caret-position="255">
+              <caret line="465" column="48" selection-start-line="465" selection-start-column="48" selection-end-line="465" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -76,8 +76,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public_html/agentSummary/agentSummary.html" />
         <option value="$PROJECT_DIR$/public_html/agentSummary/agentSummary.js" />
+        <option value="$PROJECT_DIR$/public_html/agentSummary/agentSummary.html" />
       </list>
     </option>
   </component>
@@ -280,12 +280,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1507367383349</updated>
-      <workItem from="1507367384607" duration="14750000" />
+      <workItem from="1507367384607" duration="16498000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14750000" />
+    <option name="totallyTimeSpent" value="16498000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1363" height="726" extended-state="0" />
@@ -346,23 +346,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/agentSummary/agentSummary.html">
+    <entry file="file://$PROJECT_DIR$/public_html/agentSummary/agentSummary.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="379" column="54" selection-start-line="379" selection-start-column="40" selection-end-line="379" selection-end-column="54" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#5;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#5;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#5;n#body#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="465" column="48" selection-start-line="465" selection-start-column="48" selection-end-line="465" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/agentSummary/agentSummary.js">
+    <entry file="file://$PROJECT_DIR$/public_html/agentSummary/agentSummary.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="400" column="98" selection-start-line="400" selection-start-column="98" selection-end-line="400" selection-end-column="98" />
-          <folding />
+        <state relative-caret-position="229">
+          <caret line="352" column="28" selection-start-line="352" selection-start-column="28" selection-end-line="352" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#5;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#5;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#5;n#body#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

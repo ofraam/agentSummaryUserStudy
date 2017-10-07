@@ -337,14 +337,27 @@
 
 			<div class="intro">
 
-				<div id="generalInstructions">
-				<h2>Below are videos showing parts of games played by two different pacman players: pacman A and pacman B.
-				<br>
-				Based on these videos, you will need to choose which player you'd like to play on your behalf.<br>
-					If the player you choose does better in a game, you will receive a bonus of 20 cents.
-				</h2><br>
+				<div id="selectionInstructions">
+					<h2>Below are videos showing parts of games played by two different pacman players:
+						<br>
+						pacman A and pacman B.
+					<br>
+					Based on these videos, you will need to choose which player you'd like to play on your behalf.<br>
+						If the player you choose does better in a game, you will receive a bonus of 20 cents.
+					</h2><br>
+						You can click on each of the images to restart the video.
+				</div>
+
+				<div id="preferenceInstructions">
+					<h2>Below are videos showing parts of games played by <b>the same pacman player</b>:
+						<br>
+						video A and video B.
+						<br>
+						Watch the videos and try to assess the capabilities of this pacman player based on them.
+					</h2><br>
 					You can click on each of the images to restart the video.
 				</div>
+
 			<div id="pacmancs">
 				<div id="pacmanA" style="float: left; height: 340px; overflow: hidden">
 					<h3>A</h3>
@@ -420,6 +433,13 @@
 									<li> B is more helpful </li>
 								</ul>
 							</div>
+						</div>
+						<div id = "prefExp">
+							<br>
+							<br>
+							<b>Please briefly explain your preference:</b>
+							<br>
+							<textarea id="prefExpText" rows="16" cols="40" maxlength = "500" required = "required"></textarea>
 						</div>
 					</div>
 				</div>

@@ -65,6 +65,7 @@ E.solvedCorrect = false;
 E.quizSubmitted = false;
 E.betterAgent = 'a';
 E.selectionsCompleted = false;
+E.preferenceCompleted = false;
 
 
 
@@ -226,17 +227,36 @@ function submit_strategy() {
 function submit_selection() {
     var selected = $("#agentSelection").val();
     var conf = $('input[name=confidence]:checked', '#experiment').val()
-    $('input[name=confidence]:checked', '#experiment').prop("checked",false);
+
     servlog("selection_"+E.currentPair[0]+"_"+E.currentPair[1], selected);
     servlog("confidence_"+E.currentPair[0]+"_"+E.currentPair[1], conf);
     servlog("correct", selected == E.betterAgent)
     if (E.currAgentPairIdx<E.pairs.length) {
         $("#agentSelection").val(0);
+        $('input[name=confidence]:checked', '#experiment').prop("checked",false);
         onContinue.curPage = 4;
         onContinue();
     }
     else {
         E.selectionsCompleted = true;
+        E.currAgentPairIdx = 0;
+    }
+}
+
+function submit_preference() {
+
+    var pref = $('input[name=helpful]:checked', '#experiment').val()
+    var explanationPref = $("#prefExpText").val()
+
+    servlog("preference_"+E.currentPair[0]+"_"+E.currentPair[1], pref);
+    servlog("preferenceExplanation_"+E.currentPair[0]+"_"+E.currentPair[1], explanationPref);
+    if (E.currAgentPairIdx<E.pairs.length) {
+        $('input[name=helpful]:checked', '#experiment').prop("checked",false);
+        onContinue.curPage = 5;
+        onContinue();
+    }
+    else {
+        E.preferenceCompleted = true;
     }
 }
 
@@ -399,6 +419,7 @@ function onContinue() {
                 if (Math.random()<0.5) {
                     $("#pacmanAgif").attr("src","images/"+E.currentPair[0]+ ".gif");
                     document.getElementById('agentSelection').options[1].value = E.currentPair[0];
+                    $( "#pacmanAgif").unbind( "click" );
                     $('#pacmanAgif').on({
                         'click': function(){
                             $('#pacmanAgif').attr('src',"images/"+E.currentPair[0]+ ".gif");
@@ -406,6 +427,7 @@ function onContinue() {
                         }
                     });
                     $("#pacmanBgif").attr("src","images/"+E.currentPair[1]+ ".gif");
+                    $( "#pacmanBgif").unbind( "click" );
                     document.getElementById('agentSelection').options[2].value = E.currentPair[1];
                     $('#pacmanBgif').on({
                         'click': function(){
@@ -419,6 +441,7 @@ function onContinue() {
                 else {
                     $("#pacmanAgif").attr("src","images/"+E.currentPair[1]+ ".gif");
                     document.getElementById('agentSelection').options[1].value = E.currentPair[1];
+                    $( "#pacmanAgif").unbind( "click" );
                     $('#pacmanAgif').on({
                         'click': function(){
                             $('#pacmanAgif').attr('src',"images/"+E.currentPair[1]+ ".gif");
@@ -427,6 +450,7 @@ function onContinue() {
                     });
                     $("#pacmanBgif").attr("src","images/"+E.currentPair[0]+ ".gif");
                     document.getElementById('agentSelection').options[2].value = E.currentPair[0];
+                    $( "#pacmanBgif").unbind( "click" );
                     $('#pacmanBgif').on({
                         'click': function(){
                             $('#pacmanBgif').attr('src',"images/"+E.currentPair[0]+ ".gif");
@@ -438,6 +462,8 @@ function onContinue() {
 
                 }
 				$("#experiment.page").show()
+                $("#preferenceInstructions").hide();
+                $("#selectionInstructions").show();
                 $("#pacmans").show()
                 $("#choose").show()
                 $("#preference").hide()
@@ -457,22 +483,28 @@ function onContinue() {
                 submit_selection();
             }
             if (onContinue.curPage==6) {
-                E.currAgentPairIdx = 0;
-                E.currentPair = E.pairs[E.currAgentPairIdx];
+
+                E.currentPair = E.summaryPairs[E.currAgentPairIdx];
+                E.currAgentPairIdx++;
                 shuffleArray(E.currentPair);
                 $("#pacmanAgif").attr("src","images/"+E.currentPair[0]+ ".gif");
+                $( "#pacmanAgif").unbind( "click" );
                 $('#pacmanAgif').on({
                     'click': function(){
                         $('#pacmanAgif').attr('src',"images/"+E.currentPair[0]+ ".gif");
                     }
                 });
                 $("#pacmanBgif").attr("src","images/"+E.currentPair[1]+ ".gif");
+                $( "#pacmanBgif").unbind( "click" );
                 $('#pacmanBgif').on({
                     'click': function(){
                         $('#pacmanBgif').attr('src',"images/"+E.currentPair[1]+ ".gif");
                     }
                 });
                 $("#experiment.page").show()
+                $("#preferenceInstructions").show();
+                $("#selectionInstructions").hide();
+                $("#pref").hide();
                 $("#pacmans").show()
                 $("#choose").hide()
                 $("#preference").show()
@@ -482,15 +514,22 @@ function onContinue() {
 
 
 		case 7:
-			// log_vote();
-            E.timerDone = true
-			E.endTime = msTime()
-            var timeGame = E.endTime-E.startTime
-            // submit_solution();
-            servlog("timeGame", timeGame);
-			// var timeVote = E.endTime - E.startTime
-			// servlog("timeVote", timeVote)
-			show_page_final()	
+            E.endTime=msTime();
+            if (!E.preferenceCompleted) {
+                var timePreference = E.endTime-E.startTime
+                servlog("timePreference_"+E.currentPair[0]+"_"+E.currentPair[1], timePreference);
+                submit_preference();
+            }
+
+            if (onContinue.curPage==7) {
+
+                var timeGame = E.endTime - E.startTime
+                // submit_solution();
+                servlog("timeGame", timeGame);
+                // var timeVote = E.endTime - E.startTime
+                // servlog("timeVote", timeVote)
+                show_page_final()
+            }
 
 	}
 }
