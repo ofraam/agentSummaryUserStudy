@@ -29,8 +29,33 @@ E.comparisons = {
         ["merged10r400","merged10r2000"],
     ]
 }
+E.summaryComp = {
+    pairs5: [ //the one on the right is always the better agent
+        ["merged5f200","merged5r200"],
+        ["merged5f200","merged5m200"],
+        ["merged5r200","merged5m200"],
+        ["merged5f400","merged5r400"],
+        ["merged5f400","merged5m400"],
+        ["merged5r400","merged5m400"],
+        ["merged5f2000","merged5r2000"],
+        ["merged5f2000","merged5m2000"],
+        ["merged5r2000","merged5m2000"]
+    ],
+    pairs10: [
+        ["merged10f200","merged10r200"],
+        ["merged10f200","merged10m200"],
+        ["merged10r200","merged10m200"],
+        ["merged10f400","merged10r400"],
+        ["merged10f400","merged10m400"],
+        ["merged10r400","merged10m400"],
+        ["merged10f2000","merged10r2000"],
+        ["merged10f2000","merged10m2000"],
+        ["merged10r2000","merged10m2000"]
+    ]
+}
 E.currAgentPairIdx = 0;
 E.pairs = E.comparisons.pairs5;
+E.summaryPairs = E.summaryComp.pairs5;
 E.currentPair = E.comparisons.pairs5[0];
 E.startTime = 0
 E.endTime = 0
@@ -39,6 +64,7 @@ E.condition = 'solve'
 E.solvedCorrect = false;
 E.quizSubmitted = false;
 E.betterAgent = 'a';
+E.selectionsCompleted = false;
 
 
 
@@ -72,9 +98,12 @@ function initialize_experiment() {
     switch(summaryLegth) {
         case '5':
             E.pairs = E.comparisons.pairs5;
+            E.summaryPairs = E.summaryComp.pairs5;
             break;
         case '10':
             E.pairs = E.comparisons.pairs10;
+            E.summaryPairs = E.summaryComp.pairs10;
+            break;
     }
     E.pairs = shuffleArray(E.pairs); // randomly order the pairs we show users
 
@@ -205,6 +234,9 @@ function submit_selection() {
         $("#agentSelection").val(0);
         onContinue.curPage = 4;
         onContinue();
+    }
+    else {
+        E.selectionsCompleted = true;
     }
 }
 
@@ -366,30 +398,39 @@ function onContinue() {
                 //randomize which gif goes on left and which goes on the right
                 if (Math.random()<0.5) {
                     $("#pacmanAgif").attr("src","images/"+E.currentPair[0]+ ".gif");
+                    document.getElementById('agentSelection').options[1].value = E.currentPair[0];
                     $('#pacmanAgif').on({
                         'click': function(){
                             $('#pacmanAgif').attr('src',"images/"+E.currentPair[0]+ ".gif");
+
                         }
                     });
                     $("#pacmanBgif").attr("src","images/"+E.currentPair[1]+ ".gif");
+                    document.getElementById('agentSelection').options[2].value = E.currentPair[1];
                     $('#pacmanBgif').on({
                         'click': function(){
                             $('#pacmanBgif').attr('src',"images/"+E.currentPair[1]+ ".gif");
+
+
                         }
                     });
                     E.betterAgent = 'b'; //set the correct answer
                 }
                 else {
                     $("#pacmanAgif").attr("src","images/"+E.currentPair[1]+ ".gif");
+                    document.getElementById('agentSelection').options[1].value = E.currentPair[1];
                     $('#pacmanAgif').on({
                         'click': function(){
                             $('#pacmanAgif').attr('src',"images/"+E.currentPair[1]+ ".gif");
+
                         }
                     });
                     $("#pacmanBgif").attr("src","images/"+E.currentPair[0]+ ".gif");
+                    document.getElementById('agentSelection').options[2].value = E.currentPair[0];
                     $('#pacmanBgif').on({
                         'click': function(){
                             $('#pacmanBgif').attr('src',"images/"+E.currentPair[0]+ ".gif");
+
                         }
                     });
                     E.betterAgent = 'a'; //set the correct answer
@@ -410,18 +451,37 @@ function onContinue() {
 
         case 6:
             E.endTime=msTime();
-            var timeSelection = E.endTime-E.startTime
-            servlog("timeSelection_"+E.currentPair[0]+"_"+E.currentPair[1], timeSelection);
-            submit_selection();
+            if (!E.selectionsCompleted) {
+                var timeSelection = E.endTime-E.startTime
+                servlog("timeSelection_"+E.currentPair[0]+"_"+E.currentPair[1], timeSelection);
+                submit_selection();
+            }
             if (onContinue.curPage==6) {
-                $("#explain.page").show()
-                $("#explanation").show()
+                E.currAgentPairIdx = 0;
+                E.currentPair = E.pairs[E.currAgentPairIdx];
+                shuffleArray(E.currentPair);
+                $("#pacmanAgif").attr("src","images/"+E.currentPair[0]+ ".gif");
+                $('#pacmanAgif').on({
+                    'click': function(){
+                        $('#pacmanAgif').attr('src',"images/"+E.currentPair[0]+ ".gif");
+                    }
+                });
+                $("#pacmanBgif").attr("src","images/"+E.currentPair[1]+ ".gif");
+                $('#pacmanBgif').on({
+                    'click': function(){
+                        $('#pacmanBgif').attr('src',"images/"+E.currentPair[1]+ ".gif");
+                    }
+                });
+                $("#experiment.page").show()
+                $("#pacmans").show()
+                $("#choose").hide()
+                $("#preference").show()
                 E.startTime = msTime();
             }
             break;
 
 
-		case 8:
+		case 7:
 			// log_vote();
             E.timerDone = true
 			E.endTime = msTime()

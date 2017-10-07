@@ -346,7 +346,9 @@
 					You can click on each of the images to restart the video.
 				</div>
 			<div id="pacmancs">
-				<div id="pacmanA" style="float: left">
+				<div id="pacmanA" style="float: left; height: 340px; overflow: hidden">
+					<h3>A</h3>
+					<br>
 					<img id="pacmanAgif" src="images/merged5first200.gif" >
 					<br>
 					<!--<button id="gifAbutton" onclick="document.getElementById('pacmanAgif').src='images/merged5first200.gif'">-->
@@ -356,7 +358,9 @@
 					   <!--onclick="document.getElementById('pacmanAgif').src='images/merged5first200.gif'">-->
 						<!--Click to replay gif above</a>-->
 				</div>
-				<div id="pacmanB" style="float: left">
+				<div id="pacmanB" style="float: left; height: 340px; overflow: hidden">
+					<h3>B</h3>
+					<br>
 					<img id="pacmanBgif" src="images/merged5f2000.gif" >
 					<br>
 					<!--<button id="gifBbutton" onclick="document.getElementById('pacmanBgif').src='images/merged5first2000.gif'">-->
@@ -374,9 +378,9 @@
 						<div id="answerSelection">
 							<b>Which of the Pacman players do you choose to play on your behalf?</b>
 							<select id="agentSelection">
-								<option value="0"> &nbsp;</option>
-								<option value="a">Pacman A</option>
-								<option value="b">Pacman B</option>
+								<option id="selNone" value="0"> &nbsp;</option>
+								<option id="selA" value="a">Pacman A</option>
+								<option id="selB" value="b">Pacman B</option>
 							</select>
 						</div>
 						<br>
@@ -406,13 +410,13 @@
 							<div>
 								<ul class="likert">
 									<li> A is more helpful </li>
-									<li><input type="radio" name="confidence" value="1" /></li>
-									<li><input type="radio" name="confidence" value="2" /></li>
-									<li><input type="radio" name="confidence" value="3" /></li>
-									<li><input type="radio" name="confidence" value="4" /></li>
-									<li><input type="radio" name="confidence" value="5" /></li>
-									<li><input type="radio" name="confidence" value="6" /></li>
-									<li><input type="radio" name="confidence" value="7" /></li>
+									<li><input type="radio" name="helpful" value="1" /></li>
+									<li><input type="radio" name="helpful" value="2" /></li>
+									<li><input type="radio" name="helpful" value="3" /></li>
+									<li><input type="radio" name="helpful" value="4" /></li>
+									<li><input type="radio" name="helpful" value="5" /></li>
+									<li><input type="radio" name="helpful" value="6" /></li>
+									<li><input type="radio" name="helpful" value="7" /></li>
 									<li> B is more helpful </li>
 								</ul>
 							</div>
