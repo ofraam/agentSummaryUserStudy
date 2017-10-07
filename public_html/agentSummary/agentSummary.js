@@ -69,7 +69,7 @@ function initialize_experiment() {
         E.debugMode = true
     }
     var summaryLegth = getUrlVars()['l']
-    switch(l) {
+    switch(summaryLegth) {
         case '5':
             E.pairs = E.comparisons.pairs5;
             break;
@@ -196,10 +196,18 @@ function submit_strategy() {
 
 function submit_selection() {
     var selected = $("#agentSelection").val();
-    servlog("selection", exp);
+    var conf = $('input[name=confidence]:checked', '#experiment').val()
+    $('input[name=confidence]:checked', '#experiment').prop("checked",false);
+    servlog("selection_"+E.currentPair[0]+"_"+E.currentPair[1], selected);
+    servlog("confidence_"+E.currentPair[0]+"_"+E.currentPair[1], conf);
     servlog("correct", selected == E.betterAgent)
-
+    if (E.currAgentPairIdx<E.pairs.length) {
+        $("#agentSelection").val(0);
+        onContinue.curPage = 4;
+        onContinue();
+    }
 }
+
 function submit_solution() {
 
 	var move = $("#bestmove").val();
@@ -385,6 +393,8 @@ function onContinue() {
                         }
                     });
                     E.betterAgent = 'a'; //set the correct answer
+                    servlog("currPair",E.currentPair);
+
                 }
 				$("#experiment.page").show()
                 $("#pacmans").show()
@@ -400,12 +410,14 @@ function onContinue() {
 
         case 6:
             E.endTime=msTime();
-            var timeSolution = E.endTime-E.startTime
-            servlog("timeSolution", timeSolution);
-            submit_solution();
-            $("#explain.page").show()
-            $("#explanation").show()
-            E.startTime = msTime();
+            var timeSelection = E.endTime-E.startTime
+            servlog("timeSelection_"+E.currentPair[0]+"_"+E.currentPair[1], timeSelection);
+            submit_selection();
+            if (onContinue.curPage==6) {
+                $("#explain.page").show()
+                $("#explanation").show()
+                E.startTime = msTime();
+            }
             break;
 
 
