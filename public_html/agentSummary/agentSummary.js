@@ -66,6 +66,7 @@ E.quizSubmitted = false;
 E.betterAgent = 'a';
 E.selectionsCompleted = false;
 E.preferenceCompleted = false;
+E.bonus = 0;
 
 
 
@@ -107,7 +108,10 @@ function initialize_experiment() {
             break;
     }
     E.pairs = shuffleArray(E.pairs); // randomly order the pairs we show users
-
+    E.summaryPairs = shuffleArray(E.summaryPairs); // randomly order the pairs we show users
+    $("#prefTotalRounds").text(parseInt(E.summaryPairs.length));
+    // alert(E.summaryPairs.length)
+    $("#selectTotalRounds").text(parseInt(E.pairs.length));
   	servlog("start_position",E.position)
 }
 
@@ -171,7 +175,8 @@ function show_page_final(){
 			$("#final.page").show()	
 
 	$("#btnContinue").hide()
-	showCode();	
+	showCode();
+    $("#bonus").text(parseInt(E.bonus));
 }
 
 function submit_demographics() {
@@ -232,6 +237,11 @@ function submit_selection() {
     servlog("confidence_"+E.currentPair[0]+"_"+E.currentPair[1], conf);
     servlog("explanationSelction_"+E.currentPair[0]+"_"+E.currentPair[1], explanationSelect);
     servlog("correct", selected == E.betterAgent)
+    // alert("selected =" + selected)
+    // alert("better agent =" + E.betterAgent)
+    if (selected == E.betterAgent) {
+        E.bonus = E.bonus +10;
+    }
     if (E.currAgentPairIdx<E.pairs.length) {
         $("#agentSelection").val(0);
         $('input[name=confidence]:checked', '#experiment').prop("checked",false);
@@ -252,7 +262,7 @@ function submit_preference() {
 
     servlog("preference_"+E.currentPair[0]+"_"+E.currentPair[1], pref);
     servlog("preferenceExplanation_"+E.currentPair[0]+"_"+E.currentPair[1], explanationPref);
-    if (E.currAgentPairIdx<E.pairs.length) {
+    if (E.currAgentPairIdx<E.summaryPairs.length) {
         $("#prefExpText").val("")
         $('input[name=helpful]:checked', '#experiment').prop("checked",false);
         onContinue.curPage = 5;
@@ -418,9 +428,10 @@ function onContinue() {
 				E.startTime=msTime();
                 E.currentPair = E.pairs[E.currAgentPairIdx]
                 E.currAgentPairIdx++;
+                $("#selectRound").text(parseInt(E.currAgentPairIdx));
                 //randomize which gif goes on left and which goes on the right
                 if (Math.random()<0.5) {
-                    $("#pacmanAgif").attr("src","images/"+E.currentPair[0]+ ".gif");
+                    $("#pacmanAgif").attr("src","images/startPacman.bmp");
                     document.getElementById('agentSelection').options[1].value = E.currentPair[0];
                     $( "#pacmanAgif").unbind( "click" );
                     $('#pacmanAgif').on({
@@ -429,7 +440,7 @@ function onContinue() {
 
                         }
                     });
-                    $("#pacmanBgif").attr("src","images/"+E.currentPair[1]+ ".gif");
+                    $("#pacmanBgif").attr("src","images/startPacman.bmp");
                     $( "#pacmanBgif").unbind( "click" );
                     document.getElementById('agentSelection').options[2].value = E.currentPair[1];
                     $('#pacmanBgif').on({
@@ -439,10 +450,10 @@ function onContinue() {
 
                         }
                     });
-                    E.betterAgent = 'b'; //set the correct answer
+                    E.betterAgent = E.currentPair[1]; //set the correct answer
                 }
                 else {
-                    $("#pacmanAgif").attr("src","images/"+E.currentPair[1]+ ".gif");
+                    $("#pacmanAgif").attr("src","images/startPacman.bmp");
                     document.getElementById('agentSelection').options[1].value = E.currentPair[1];
                     $( "#pacmanAgif").unbind( "click" );
                     $('#pacmanAgif').on({
@@ -451,7 +462,7 @@ function onContinue() {
 
                         }
                     });
-                    $("#pacmanBgif").attr("src","images/"+E.currentPair[0]+ ".gif");
+                    $("#pacmanBgif").attr("src","images/startPacman.bmp");
                     document.getElementById('agentSelection').options[2].value = E.currentPair[0];
                     $( "#pacmanBgif").unbind( "click" );
                     $('#pacmanBgif').on({
@@ -460,7 +471,7 @@ function onContinue() {
 
                         }
                     });
-                    E.betterAgent = 'a'; //set the correct answer
+                    E.betterAgent = E.currentPair[1]; //set the correct answer
                     servlog("currPair",E.currentPair);
 
                 }
@@ -486,18 +497,20 @@ function onContinue() {
                 submit_selection();
             }
             if (onContinue.curPage==6) {
-
+                alert("You completed the pacman player selection phase! Next, you will be shown pairs of video summaries " +
+                    "of the *same* pacman player and will be asked which video is more helpful")
                 E.currentPair = E.summaryPairs[E.currAgentPairIdx];
                 E.currAgentPairIdx++;
+                $("#prefRound").text(parseInt(E.currAgentPairIdx));
                 shuffleArray(E.currentPair);
-                $("#pacmanAgif").attr("src","images/"+E.currentPair[0]+ ".gif");
+                 $("#pacmanAgif").attr("src","images/startPacman.bmp");
                 $( "#pacmanAgif").unbind( "click" );
                 $('#pacmanAgif').on({
                     'click': function(){
                         $('#pacmanAgif').attr('src',"images/"+E.currentPair[0]+ ".gif");
                     }
                 });
-                $("#pacmanBgif").attr("src","images/"+E.currentPair[1]+ ".gif");
+                $("#pacmanBgif").attr("src","images/startPacman.bmp");
                 $( "#pacmanBgif").unbind( "click" );
                 $('#pacmanBgif').on({
                     'click': function(){

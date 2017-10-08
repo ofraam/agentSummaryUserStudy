@@ -10,7 +10,7 @@
 
         <script src="../generic-tools.js"></script>    
         <script src="../experiment-tools.js"></script>       
-        <script src="tictactoe-widget.js"></script>
+        <!--<script src="tictactoe-widget.js"></script>-->
         <script src="agentSummary.js"></script>
     </head>
     <body>
@@ -120,24 +120,39 @@
 				</h1>
 				
 				<div class="question">
-					<p> In this task you will be shown video summaries of Pacman games. These videos will show you parts
+					<p> In this task you will be shown pairs of video summaries of Pacman games. These videos will show you parts
 						of games played by various Pacman players.
+						<br>
+						In the first rounds you will be shown two video summaries of <b>two different Pacman players</b>
+						and will be asked to pick which Pacman player you would like to play on your behalf.
+						You will earn a 10 cent bonus for each time you pick the Pacman agent that achieves a better
+						score on average. You will be notified at the end of the task about the bonus you earned.
+						<br>
+						Later, you will be shown two video summaries of <b>the same Pacman player</b>. You will be asked
+						to decide which video summary is more helpful for you in assessing the capabilities of each
+						Pacman player.
 					
 					</p>
 					
-					<p>
+					<div class = question>
+						<img src="images/startPacman.bmp" >
 						Pacman's goal is to eat as many "pills" (white dots) as possible to earn points,
-						while escaping the ghosts. Pacman receives 10 points for each pill, and dies when its eaten
-						by a ghost.
-					</p>
-					<p>
-						In addition to the regular pellets, there are also four special "power pills" (large white dots).
+						while escaping the ghosts (ghosts are in the middle of the screen at the onset of the game as shown
+						in the screenshot).
+						<br>
+						Pacman receives 10 points for each pill, and dies when its eaten by a ghost.
+					</div>
+					<div class = question>
+						<img src="images/powerPills.bmp" >
+						In addition to the regular pellets, there are also four special "power pills"
+						(large white dots, shown in the yellow rectangles in the screenshots).
 						Pacman receives 50 points for eating a power pellet.
-					</p>
-					<p>
-						Eating a power pill also gives Pacman limited time during which the ghosts become blue (see below)
+					</div>
+					<div class="question">
+						<img src="images/blueGhosts.png" >
+						Eating a power pill also gives Pacman limited time during which the ghosts become blue (see screenshot)
 						and Pacman can eat the ghosts. Pacman receives 200 points for each ghost it eats.
-					</p>
+					</div>
 									
 				</div>
 
@@ -203,14 +218,6 @@
 		</div>
 	</div>
 
-		<div id="explain" class="page">
-			<div id='explanation'>
-				<br><br>
-				Please briefly explain the strategy you used to solve the problem:
-				<br><br>
-							<textarea id="exp" rows="4" cols="50"></textarea>
-			</div>
-		</div>
 
 
 		<div id="experiment" class="page">
@@ -218,18 +225,20 @@
 			<div class="intro">
 
 				<div id="selectionInstructions">
+					Round <span id="selectRound">1</span> / <span id="selectTotalRounds">9</span>
 					<h2>Below are videos showing parts of games played by <span style="color:red">two different Pacman players</span>:
 						<br>
 						Pacman A (left) and Pacman B (right).</h2>
 					<br>
 					<br>
 					Based on these videos, you will need to choose which Pacman player you'd like to play on your behalf.<br>
-						If the player you choose does better in a game, you will receive a bonus of 20 cents.
+						You will receive a bonus of 10 cents for each time you select the better performing Pacman player.
 					<br>
 						Note: you can click on each of the images to restart the video.
 				</div>
 
 				<div id="preferenceInstructions">
+					Round <span id="prefRound">1</span> / <span id="prefTotalRounds">9</span>
 					<h2>Below are videos showing parts of games played by <span style="color:red">the same Pacman player</span>:
 						<br>
 						video A (left) and video B (right).</h2>
@@ -240,11 +249,11 @@
 				</div>
 
 			<div id="pacmancs">
-				<div id="pacmanA" style="float: left; height: 340px; overflow: hidden">
+				<div id="pacmanA" style="float: left; height: 312px; overflow: hidden">
 					<br>
 					<b>     &nbsp &nbsp &nbsp    &nbsp &nbsp &nbsp   A</b>
 					<br>
-					<img id="pacmanAgif" src="images/merged5first200.gif" >
+					<img id="pacmanAgif" src="images/startPacman.bmp" >
 					<br>
 					<!--<button id="gifAbutton" onclick="document.getElementById('pacmanAgif').src='images/merged5first200.gif'">-->
 						<!--Play (or replay) gif-->
@@ -253,11 +262,11 @@
 					   <!--onclick="document.getElementById('pacmanAgif').src='images/merged5first200.gif'">-->
 						<!--Click to replay gif above</a>-->
 				</div>
-				<div id="pacmanB" style="float: left; height: 340px; overflow: hidden">
+				<div id="pacmanB" style="float: left; height: 312px; overflow: hidden">
 					<br>
 					<b>  &nbsp &nbsp   &nbsp &nbsp &nbsp &nbsp       B</b>
 					<br>
-					<img id="pacmanBgif" src="images/merged5f2000.gif" >
+					<img id="pacmanBgif" src="images/startPacman.bmp" >
 					<br>
 					<!--<button id="gifBbutton" onclick="document.getElementById('pacmanBgif').src='images/merged5first2000.gif'">-->
 						<!--Play (or replay) gif-->
@@ -364,6 +373,9 @@
 				<span class='code'>
 					code
 				</span>
+				<p>You will receive a bonus of <span id="bonus">0</span> cents for choosing the better performing Pacman
+					players.
+				</p>
 			</div>
 		</div>
 

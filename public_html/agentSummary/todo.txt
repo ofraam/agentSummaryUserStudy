@@ -1,7 +1,8 @@
--static image before gif plays
--explain that there will be 9 screens, show progress
--add separator between selection task and summary task
--make preference and selection for different length summaries
--images for tutorial
+-consent form
 -upload to server
+-check DB
 -launch pilot on turk
+-make preference and selection for different length summaries(?)
+--fewer preference questions?
+
+
