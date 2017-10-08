@@ -203,7 +203,7 @@ function submit_quiz() {
     servlog("quiz6", q6);
 	
 	var passed = false;
-	if( q1 == '2' && q2 == '2' && q3 =='3' && q4 == 'c1' && q5=='b4' && q6=='b3'){
+	if( q1 == '3' && q2 == '2' && q3 =='2' && q4 == '1' && q5=='2'){
 		var passed = true;
 	}
 	
@@ -227,13 +227,15 @@ function submit_strategy() {
 function submit_selection() {
     var selected = $("#agentSelection").val();
     var conf = $('input[name=confidence]:checked', '#experiment').val()
-
+    var explanationSelect = $("#selectExpText").val();
     servlog("selection_"+E.currentPair[0]+"_"+E.currentPair[1], selected);
     servlog("confidence_"+E.currentPair[0]+"_"+E.currentPair[1], conf);
+    servlog("explanationSelction_"+E.currentPair[0]+"_"+E.currentPair[1], explanationSelect);
     servlog("correct", selected == E.betterAgent)
     if (E.currAgentPairIdx<E.pairs.length) {
         $("#agentSelection").val(0);
         $('input[name=confidence]:checked', '#experiment').prop("checked",false);
+        $("#selectExpText").val("");
         onContinue.curPage = 4;
         onContinue();
     }
@@ -251,6 +253,7 @@ function submit_preference() {
     servlog("preference_"+E.currentPair[0]+"_"+E.currentPair[1], pref);
     servlog("preferenceExplanation_"+E.currentPair[0]+"_"+E.currentPair[1], explanationPref);
     if (E.currAgentPairIdx<E.pairs.length) {
+        $("#prefExpText").val("")
         $('input[name=helpful]:checked', '#experiment').prop("checked",false);
         onContinue.curPage = 5;
         onContinue();

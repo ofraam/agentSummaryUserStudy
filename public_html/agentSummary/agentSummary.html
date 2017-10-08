@@ -116,75 +116,31 @@
 		<div id="instructions" class="page">
 			<div class="intro">
 				<h1>
-					Instructions - Tic-tac-toe
+					Instructions - Pacman
 				</h1>
 				
 				<div class="question">
-					<p> In this task you will play a version of the game Tic-tac-toe, your goal will be to find the best move given a starting position.
+					<p> In this task you will be shown video summaries of Pacman games. These videos will show you parts
+						of games played by various Pacman players.
 					
 					</p>
 					
 					<p>
-						You will have the opportunity to get a bonus based on your performance. If your solution is correct you get a bonus of $1.
+						Pacman's goal is to eat as many "pills" (white dots) as possible to earn points,
+						while escaping the ghosts. Pacman receives 10 points for each pill, and dies when its eaten
+						by a ghost.
+					</p>
+					<p>
+						In addition to the regular pellets, there are also four special "power pills" (large white dots).
+						Pacman receives 50 points for eating a power pellet.
+					</p>
+					<p>
+						Eating a power pill also gives Pacman limited time during which the ghosts become blue (see below)
+						and Pacman can eat the ghosts. Pacman receives 200 points for each ghost it eats.
 					</p>
 									
 				</div>
-				
-				<div class="question">
-					<div class="6by6">
 
-					<img src="images/tut1.png" >
-
-					This version of the game Tic-tac-toe is played on a 6x6 board as displayed on the right.  Please read the instructions carefully; there will be a quiz on the next step.
-					</div>
-
-					<div class="10by10">
-
-						<img src="images/tut1_10.png" >
-
-						This version of the game Tic-tac-toe is played on a 10x10 board as displayed on the right.  Please read the instructions carefully; there will be a quiz on the next step.
-					</div>
-				</div>
-
-				<div class="question" id="monkey"> 
-
-					<img class="6by6" src="images/tut2.png">
-
-					<img class="10by10" src="images/tut2_10.png">
-
-					Two players, X and O, take turns marking the spaces on the board.
-				</div>
-
-				<div class="question"> 
-					<div class="6by6">
-					<img src="images/tut3.png" >
-
-					The player who succeeds in marking <strong> four </strong> neighboring spaces in a horizontal, vertical, or diagonal row wins the game. 
-					
-					<br><br>In the image on the right, O won the game by marking four spaces vertically.
-					</div>
-					<div class="10by10">
-						<img src="images/tut3_10.png" >
-
-						The player who succeeds in marking <strong> five </strong> neighboring spaces in a horizontal, vertical, or diagonal row wins the game.
-
-						<br><br>In the image on the right, O won the game by marking five spaces vertically.
-					</div>
-				</div>
-
-				<div class="question">
-					<div class="6by6">
-					<img src="images/tut4.png" >
-
-					In this image X won by marking four spaces diagonally.
-					</div>
-					<div class="10by10">
-						<img src="images/tut4_10.png" >
-
-						In this image X won by marking five spaces diagonally.
-					</div>
-				</div>
-	
 			</div>
 		</div> 
 		
@@ -193,131 +149,55 @@
 				<div id="quizDiv">
 				<h1>Please answer the following questions:</h1>
 				
-					<div class="question">
-						<img class="6by6" src="images/q1.png" >
-						<img class="10by10" src="images/q1_10.png" >
-						<h3>Who won?</h3>
+					<div>
+						<h3>Eating a regular pill give Pacman:</h3>
 						<select id="q1">
 							<option value="0">&nbsp;</option>
-							<option value="1">nobody</option>
-							<option value="2">X</option>
-							<option value="3">O</option>
+							<option value="1">no points</option>
+							<option value="2">1 point</option>
+							<option value="3">10 points</option>
 						</select>
 					</div>
-				
-					<div class="question">
-						<img class="6by6" src="images/q2.png" >
-						<img class="10by10" src="images/q2_10.png" >
-						<h3>Who won?</h3>
+
+					<div>
+						<h3>Power pills are:</h3>
 						<select id="q2">
-							<option value="0"> &nbsp;</option>
-							<option value="1">nobody</option>
-							<option value="2">X</option>
-							<option value="3">O</option>
+							<option value="0">&nbsp;</option>
+							<option value="1">regular white dots</option>
+							<option value="2">large white dots</option>
+							<option value="3">there's no such thing as power pills</option>
 						</select>
 					</div>
 
-					<div class="question">
-						<img class="6by6" src="images/q3.png">
-						<img class="10by10" src="images/q3_10.png">
-						<h3>Who won?</h3>
+					<div>
+						<h3>When do ghosts become blue?</h3>
 						<select id="q3">
-							<option value="0"> &nbsp;</option>
-							<option value="1">nobody</option>
-							<option value="2">X</option>
-							<option value="3">O</option>
+							<option value="0">&nbsp;</option>
+							<option value="1">Every 2 minutes</option>
+							<option value="2">When Pacman eats a power pill</option>
+							<option value="3">When Pacman gets close to a ghost</option>
 						</select>
 					</div>
 
-					<div class="question">
-						<img class="6by6" src="images/q4.png">
-						<img class="10by10" src="images/q4_10.png">
-						<h3>X can win in one move. What is the move?</h3>
-						<input type="text" id="q4" maxlength="2" size="2" />
-						example: a1
+					<div>
+						<h3>What happens when ghosts are blue?</h3>
+						<select id="q4">
+							<option value="0">&nbsp;</option>
+							<option value="1">Pacman can eat them</option>
+							<option value="2">Ghosts move faster</option>
+							<option value="3">Ghosts move slower</option>
+						</select>
 					</div>
 
-					<div class="question">
-						<img class="6by6" src="images/q5.png">
-						<img class="10by10" src="images/q5_10.png">
-						<h3>O can win in one move. What is the move?</h3>
-						<input type="text" id="q5" maxlength="2" size="2" />
-						example: a1
+					<div>
+						<h3>How many points does Pacman get for eating a ghost?</h3>
+						<select id="q5">
+							<option value="0">&nbsp;</option>
+							<option value="1">Pacman can't eat ghosts</option>
+							<option value="2">200</option>
+							<option value="3">1000</option>
+						</select>
 					</div>
-
-					<div class="question">
-						<div>
-						<div>
-							<div id="exampleSolve">
-							<h3>Your task will be to find the winning move for X, such that
-								X wins no matter what the O player does. Below is an example, please read it carefully.</h3>
-							</div>
-							<div id="exampleVerify">
-								<h3>Your task will be to determine whether a certain move that X makes will guarantee that
-									X wins no matter what the O player does. Below is an example, please read it carefully.</h3>
-							</div>
-							<br>
-								When solving the problem, you will be able to use an interactive board (like the one below) to try different strategies.
-							<br><br>
-							When you click a square, an X or an O will appear
-								(depending on who's turn it is).
-							<br>You will need to make moves for both players when trying
-								out strategies. Both players should play as best as they can and try to win,
-								so you will need to try to make the
-								best moves you can for
-									both X and O.
-
-						</div>
-						<div id="widget-container-practice" style="float: right">
-							<div id="canvas-container-practice">
-							</div>
-							<div id="buttons-container-practice">
-								<button id="reset-practice" class="reset">Reset</button>
-								<button id="undo-practice" class="undo"> Undo</button>
-
-							</div>
-						</div>
-						<div style="float: right; width: 320px; margin-left: 5px; margin-top: 50px;">
-							<div class="6by6">
-								It is X's turn to play. In this position, X can force a win in 2 turns.
-								This means that X can win the game by placing 2 more marks,
-								even when the O player plays as best as possible to win as well.
-								<br><br>
-								In this example, X can guarantee a win by playing b3.
-								After that, no matter what move O will make, X will still win. For example,
-								if O plays e3, X will play a3 and win, and if O plays a3, X will play e3 and win. Note that O
-								cannot threaten X in any other position, so O will surely lose this game.
-
-								<br><br>Use the board to verify that X will indeed ensure a win in two moves by playing b3.
-								<br> Each X move you play will show the move number so you can easily count how
-								many moves you've played.
-							</div>
-
-							<div class="10by10">
-								It is X's turn to play. In this position, X can force a win in 2 turns.
-								This means that X can win the game by placing 2 more marks,
-								even when the O player plays as best as psossible to win as well.
-								<br><br>
-								In this example, X can guarantee a win by playing b3.
-								After that, no matter what move O will make, X will still win. For example,
-								if O plays e3, X will play a3 and win, and if O plays a3, X will play e3 and win. Note that O
-								cannot threaten X in any other position, so O will surely lose this game.
-
-								<br><br>Use the board to verify that X will indeed ensure a win in two moves by playing b3.
-								<br> Each X move you play will show the move number so you can easily count how
-								many moves you've played.
-							</div>
-
-							<br><br>
-							<div id="">
-							<b>First move to ensure a win for X is: </b>
-							<input type="text" id="q6" maxlength="2" size="2" />
-							</div>
-
-
-						</div>
-					</div>
-				</div>
 			</div>
 
 		</div>
@@ -338,29 +218,31 @@
 			<div class="intro">
 
 				<div id="selectionInstructions">
-					<h2>Below are videos showing parts of games played by two different pacman players:
+					<h2>Below are videos showing parts of games played by <span style="color:red">two different Pacman players</span>:
 						<br>
-						pacman A and pacman B.
+						Pacman A (left) and Pacman B (right).</h2>
 					<br>
-					Based on these videos, you will need to choose which player you'd like to play on your behalf.<br>
+					<br>
+					Based on these videos, you will need to choose which Pacman player you'd like to play on your behalf.<br>
 						If the player you choose does better in a game, you will receive a bonus of 20 cents.
-					</h2><br>
-						You can click on each of the images to restart the video.
+					<br>
+						Note: you can click on each of the images to restart the video.
 				</div>
 
 				<div id="preferenceInstructions">
-					<h2>Below are videos showing parts of games played by <b>the same pacman player</b>:
+					<h2>Below are videos showing parts of games played by <span style="color:red">the same Pacman player</span>:
 						<br>
-						video A and video B.
+						video A (left) and video B (right).</h2>
 						<br>
-						Watch the videos and try to assess the capabilities of this pacman player based on them.
-					</h2><br>
-					You can click on each of the images to restart the video.
+						Watch the videos and try to assess the capabilities of this Pacman player based on them.
+					<br>
+					Note: you can click on each of the images to restart the video.
 				</div>
 
 			<div id="pacmancs">
 				<div id="pacmanA" style="float: left; height: 340px; overflow: hidden">
-					<h3>A</h3>
+					<br>
+					<b>     &nbsp &nbsp &nbsp    &nbsp &nbsp &nbsp   A</b>
 					<br>
 					<img id="pacmanAgif" src="images/merged5first200.gif" >
 					<br>
@@ -372,7 +254,8 @@
 						<!--Click to replay gif above</a>-->
 				</div>
 				<div id="pacmanB" style="float: left; height: 340px; overflow: hidden">
-					<h3>B</h3>
+					<br>
+					<b>  &nbsp &nbsp   &nbsp &nbsp &nbsp &nbsp       B</b>
 					<br>
 					<img id="pacmanBgif" src="images/merged5f2000.gif" >
 					<br>
@@ -412,6 +295,13 @@
 									<li> Very confident </li>
 								</ul>
 							</div>
+							<div id = "selectExp">
+								<br>
+								<br>
+								<b>Please briefly explain your selection:</b>
+								<br>
+								<textarea id="selectExpText" rows="5" cols="100" maxlength = "500" required = "required"></textarea>
+							</div>
 						</div>
 					</div>
 					<br>
@@ -439,7 +329,7 @@
 							<br>
 							<b>Please briefly explain your preference:</b>
 							<br>
-							<textarea id="prefExpText" rows="16" cols="40" maxlength = "500" required = "required"></textarea>
+							<textarea id="prefExpText" rows="5" cols="100" maxlength = "500" required = "required"></textarea>
 						</div>
 					</div>
 				</div>
