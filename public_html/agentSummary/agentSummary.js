@@ -239,7 +239,7 @@ function submit_selection() {
     servlog("selection_"+E.currentPair[0]+"_"+E.currentPair[1], selected);
     servlog("confidence_"+E.currentPair[0]+"_"+E.currentPair[1], conf);
     servlog("explanationSelction_"+E.currentPair[0]+"_"+E.currentPair[1], explanationSelect);
-    servlog("correct", selected == E.betterAgent)
+    servlog("correct_"+E.currentPair[0]+"_"+E.currentPair[1], selected == E.betterAgent)
     // alert("selected =" + selected)
     // alert("better agent =" + E.betterAgent)
     if (selected == E.betterAgent) {
@@ -279,75 +279,6 @@ function submit_preference() {
     else {
         E.preferenceCompleted = true;
     }
-}
-
-function submit_solution() {
-
-	var move = $("#bestmove").val();
-	E.move = move;
-    var conf = $('input[name=confidence]:checked', '#experiment').val()
-    var ver = $("#verification").val()
-    // if(typeof conf != 'undefined')
-	// {
-        // var solution = $("#solution").val();
-        servlog("best_move", move);
-    if (conf!=undefined)
-    {
-        servlog("confidence", conf);
-    }
-        servlog("verification_answer", ver);
-	// }
-
-    if (E.condition == "solve") {
-        // alert(move)
-        if (E.configuration.winMove.indexOf(move) > -1)
-        {
-            E.solvedCorrect = true;
-        }
-        // else { //TODO: move from submit solution to screen
-        //     alert("Sorry, your solution is incorrect. The correct solution was "+E.configuration.winMove[0] +". In the next screen you will" +
-        //         "receive a verification code to paste in your HIT submission.")
-        // }
-    }
-    else {
-        if (ver=="yes") {
-            E.solvedCorrect = true;
-        }
-        // else  //TODO: move from submit solution to screen
-        // {
-        //     alert("Sorry, your solution is incorrect. The move for X was indeed a winning move. In the next screen you will" +
-        //         "receive a verification code to paste in your HIT submission.")
-        // }
-    }
-    servlog("correct",E.solvedCorrect);
-
-
-}
-
-function suggest_solution(){
-	
-	
-	$("#group.page").show()
-	
-	$("#widget-container").prependTo($("#suggest"))
-	
-	E.widget.reset();
-	$("#own").html(E.move)
-}
-
-function log_vote(){
-	
-	voteOwn = $("#cbown").prop('checked')
-	voteA = $("#cba").prop('checked')
-	voteB = $("#cbb").prop('checked')
-	
-	explanationVote = $("#explanationVote").val()
-
-	servlog("vote.own", voteOwn)
-	servlog("vote.A", voteA)
-	servlog("vote.B", voteB)
-	servlog("explanationVote", explanationVote )
-	
 }
 
 
@@ -445,6 +376,7 @@ function onContinue() {
                     $('#pacmanAgif').on({
                         'click': function(){
                             $('#pacmanAgif').attr('src',"images/"+E.currentPair[0]+ ".gif");
+                            servlog("clikedVideoA",E.currentPair[0])
 
                         }
                     });
@@ -454,6 +386,7 @@ function onContinue() {
                     $('#pacmanBgif').on({
                         'click': function(){
                             $('#pacmanBgif').attr('src',"images/"+E.currentPair[1]+ ".gif");
+                            servlog("clikedVideoB",E.currentPair[1])
 
 
                         }
@@ -467,7 +400,7 @@ function onContinue() {
                     $('#pacmanAgif').on({
                         'click': function(){
                             $('#pacmanAgif').attr('src',"images/"+E.currentPair[1]+ ".gif");
-
+                            servlog("clikedVideoA",E.currentPair[1]);
                         }
                     });
                     $("#pacmanBgif").attr("src","images/startPacman.bmp");
@@ -476,7 +409,7 @@ function onContinue() {
                     $('#pacmanBgif').on({
                         'click': function(){
                             $('#pacmanBgif').attr('src',"images/"+E.currentPair[0]+ ".gif");
-
+                            servlog("clikedVideoB",E.currentPair[0])
                         }
                     });
                     E.betterAgent = E.currentPair[1]; //set the correct answer
@@ -514,6 +447,7 @@ function onContinue() {
                 $('#pacmanAgif').on({
                     'click': function(){
                         $('#pacmanAgif').attr('src',"images/"+E.currentPair[0]+ ".gif");
+                        servlog("clikedVideoA",E.currentPair[0])
                     }
                 });
                 $("#pacmanBgif").attr("src","images/startPacman.bmp");
@@ -521,6 +455,7 @@ function onContinue() {
                 $('#pacmanBgif').on({
                     'click': function(){
                         $('#pacmanBgif').attr('src',"images/"+E.currentPair[1]+ ".gif");
+                        servlog("clikedVideoB",E.currentPair[1])
                     }
                 });
                 $("#experiment.page").show()

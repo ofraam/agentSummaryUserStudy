@@ -1,5 +1,5 @@
-user = "complexity"
-passwd = "JeXDppt"
+user = "pacman"
+passwd = "pacman"
 host = "localhost"
 
 
