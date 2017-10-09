@@ -112,7 +112,7 @@ function initialize_experiment() {
     $("#prefTotalRounds").text(parseInt(E.summaryPairs.length));
     // alert(E.summaryPairs.length)
     $("#selectTotalRounds").text(parseInt(E.pairs.length));
-  	servlog("start_position",E.position)
+  	// servlog("start_position",E.position)
 }
 
 /**
