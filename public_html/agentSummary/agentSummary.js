@@ -31,13 +31,13 @@ E.comparisons = {
 }
 E.summaryComp = {
     pairs5: [ //the one on the right is always the better agent
-        ["merged5f200","merged5r200"],
+        // ["merged5f200","merged5r200"],
         ["merged5f200","merged5m200"],
         ["merged5r200","merged5m200"],
-        ["merged5f400","merged5r400"],
-        ["merged5f400","merged5m400"],
-        ["merged5r400","merged5m400"],
-        ["merged5f2000","merged5r2000"],
+        // ["merged5f400","merged5r400"],
+        // ["merged5f400","merged5m400"],
+        // ["merged5r400","merged5m400"],
+        // ["merged5f2000","merged5r2000"],
         ["merged5f2000","merged5m2000"],
         ["merged5r2000","merged5m2000"]
     ],
@@ -252,6 +252,8 @@ function submit_selection() {
     else {
         E.selectionsCompleted = true;
         E.currAgentPairIdx = 0;
+        alert("You completed the pacman player selection phase! Next, you will be shown pairs of video summaries " +
+            "of the *same* pacman player and will be asked which video is more helpful")
     }
 }
 
@@ -497,8 +499,6 @@ function onContinue() {
                 submit_selection();
             }
             if (onContinue.curPage==6) {
-                alert("You completed the pacman player selection phase! Next, you will be shown pairs of video summaries " +
-                    "of the *same* pacman player and will be asked which video is more helpful")
                 E.currentPair = E.summaryPairs[E.currAgentPairIdx];
                 E.currAgentPairIdx++;
                 $("#prefRound").text(parseInt(E.currAgentPairIdx));
@@ -524,6 +524,7 @@ function onContinue() {
                 $("#pacmans").show()
                 $("#choose").hide()
                 $("#preference").show()
+                $(window).scrollTop(0,0);
                 E.startTime = msTime();
             }
             break;

@@ -1,4 +1,3 @@
--consent form
 -upload to server
 -check DB
 -launch pilot on turk
