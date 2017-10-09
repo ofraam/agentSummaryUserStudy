@@ -177,6 +177,7 @@ function show_page_final(){
 	$("#btnContinue").hide()
 	showCode();
     $("#bonus").text(parseInt(E.bonus));
+    servlog("bonus",E.bonus);
 }
 
 function submit_demographics() {
