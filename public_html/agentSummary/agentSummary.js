@@ -197,7 +197,7 @@ function submit_quiz() {
 	var q3 = $("#q3").val()
 	var q4 = $("#q4").val()	
 	var q5 = $("#q5").val()
-    var q6 = $("#q6").val()
+    // var q6 = $("#q6").val()
 
 	
 	servlog("quiz1", q1);
@@ -205,7 +205,7 @@ function submit_quiz() {
 	servlog("quiz3", q3);
 	servlog("quiz4", q4);
 	servlog("quiz5", q5);
-    servlog("quiz6", q6);
+    // servlog("quiz6", q6);
 	
 	var passed = false;
 	if( q1 == '3' && q2 == '2' && q3 =='2' && q4 == '1' && q5=='2'){
