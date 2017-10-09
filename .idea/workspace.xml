@@ -42,8 +42,8 @@
       <file leaf-file-name="agentSummary.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public_html/agentSummary/agentSummary.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="115" column="1" selection-start-line="115" selection-start-column="1" selection-end-line="115" selection-end-column="1" />
+            <state relative-caret-position="305">
+              <caret line="208" column="4" selection-start-line="208" selection-start-column="4" selection-end-line="208" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -302,12 +302,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1507367383349</updated>
-      <workItem from="1507367384607" duration="30523000" />
+      <workItem from="1507367384607" duration="31137000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30523000" />
+    <option name="totallyTimeSpent" value="31137000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1365" height="726" extended-state="0" />
@@ -392,8 +392,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/agentSummary/agentSummary.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="115" column="1" selection-start-line="115" selection-start-column="1" selection-end-line="115" selection-end-column="1" />
+        <state relative-caret-position="305">
+          <caret line="208" column="4" selection-start-line="208" selection-start-column="4" selection-end-line="208" selection-end-column="4" />
           <folding />
         </state>
       </provider>
