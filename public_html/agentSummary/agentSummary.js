@@ -232,6 +232,9 @@ function submit_strategy() {
 function submit_selection() {
     var selected = $("#agentSelection").val();
     var conf = $('input[name=confidence]:checked', '#experiment').val()
+    if (conf ==  undefined) {
+        conf = "";
+    }
     var explanationSelect = $("#selectExpText").val();
     servlog("selection_"+E.currentPair[0]+"_"+E.currentPair[1], selected);
     servlog("confidence_"+E.currentPair[0]+"_"+E.currentPair[1], conf);
@@ -260,6 +263,9 @@ function submit_selection() {
 function submit_preference() {
 
     var pref = $('input[name=helpful]:checked', '#experiment').val()
+    if (pref ==  undefined) {
+        pref = "";
+    }
     var explanationPref = $("#prefExpText").val()
 
     servlog("preference_"+E.currentPair[0]+"_"+E.currentPair[1], pref);
