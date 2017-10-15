@@ -6,16 +6,38 @@ experiment = "tictactoe"
 
 E = {}
 E.comparisons = {
+    // pairs5: [ //the one on the right is always the better agent
+    //     ["merged5f200","merged5f2000"],
+    //     ["merged5f200","merged5f400"],
+    //     ["merged5f400","merged5f2000"],
+    //     ["merged5m200","merged5m2000"],
+    //     ["merged5m200","merged5m400"],
+    //     ["merged5m400","merged5m2000"],
+    //     ["merged5r200","merged5r2000"],
+    //     ["merged5r200","merged5r400"],
+    //     ["merged5r400","merged5r2000"],
+    // ],
+    // pairs5: [ //the one on the right is always the better agent
+    //     {summary: "first", agent1: "200", agent2: "2000", file1:"merged5f200", file2: "merged5f2000"},
+    //     {summary: "first", agent1: "200", agent2: "400", file1:"merged5f200", file2: "merged5f400"},
+    //     {summary: "first", agent1: "400", agent2: "2000", file1:"merged5f400", file2: "merged5f2000"},
+    //     {summary: "max", agent1: "200", agent2: "2000", file1:"merged5m200", file2: "merged5m2000"},
+    //     {summary: "max", agent1: "200", agent2: "400", file1:"merged5m200", file2: "merged5m400"},
+    //     {summary: "max", agent1: "400", agent2: "2000", file1:"merged5m400", file2: "merged5m2000"},
+    //     {summary: "random", agent1: "200", agent2: "2000", file1:"merged5r200", file2: "merged5r2000"},
+    //     {summary: "random", agent1: "200", agent2: "400", file1:"merged5r200", file2: "merged5r400"},
+    //     {summary: "random", agent1: "400", agent2: "2000", file1:"merged5r400", file2: "merged5r2000"}
+    // ],
     pairs5: [ //the one on the right is always the better agent
-        ["merged5f200","merged5f2000"],
-        ["merged5f200","merged5f400"],
-        ["merged5f400","merged5f2000"],
-        ["merged5m200","merged5m2000"],
-        ["merged5m200","merged5m400"],
-        ["merged5m400","merged5m2000"],
-        ["merged5r200","merged5r2000"],
-        ["merged5r200","merged5r400"],
-        ["merged5r400","merged5r2000"],
+        [{summary: "first", agent: "200", file:"merged5f200"},{summary: "first", agent: "2000", file: "merged5f2000"}],
+        [{summary: "first", agent: "200", file:"merged5f200"},{summary: "first", agent: "400", file: "merged5f400"}],
+        [{summary: "first", agent: "400", file:"merged5f400"},{summary: "first", agent: "2000", file: "merged5f2000"}],
+        [{summary: "max", agent: "200", file:"merged5m200"},{summary: "max", agent: "2000", file: "merged5m2000"}],
+        [{summary: "max", agent: "200", file:"merged5m200"},{summary: "max", agent: "400", file: "merged5m400"}],
+        [{summary: "max", agent: "400", file:"merged5m400"},{summary: "max", agent: "2000", file: "merged5m2000"}],
+        [{summary: "random", agent: "200", file:"merged5r200"},{summary: "random", agent: "2000", file: "merged5r2000"}],
+        [{summary: "random", agent: "200", file:"merged5r200"},{summary: "random", agent: "400", file: "merged5r400"}],
+        [{summary: "random", agent: "400", file:"merged5r400"},{summary: "random", agent: "2000", file: "merged5r2000"}]
     ],
     pairs10: [
         ["merged10f200","merged10f2000"],
@@ -237,10 +259,11 @@ function submit_selection() {
         conf = "";
     }
     var explanationSelect = $("#selectExpText").val();
-    servlog("selection_"+E.currentPair[0]+"_"+E.currentPair[1], selected);
-    servlog("confidence_"+E.currentPair[0]+"_"+E.currentPair[1], conf);
-    servlog("explanationSelction_"+E.currentPair[0]+"_"+E.currentPair[1], explanationSelect);
-    servlog("correct_"+E.currentPair[0]+"_"+E.currentPair[1], selected == E.betterAgent)
+    servlog("selection_"+E.currentPair[0].summary+"_"+ +E.currentPair[0].agent+ "_"+E.currentPair[1].agent+"_"+selected,
+        selected == E.betterAgent);
+    servlog("confidence_"+E.currentPair[0].summary+"_"+ +E.currentPair[0].agent+ "_"+E.currentPair[1].agent+"_"+selected, conf);
+    servlog("explanationSelction_"+E.currentPair[0].summary+"_"+ +E.currentPair[0].agent+ "_"+E.currentPair[1].agent+"_"+selected, explanationSelect);
+    servlog("correct_"+E.currentPair[0].summary+"_"+ +E.currentPair[0].agent+ "_"+E.currentPair[1].agent+"_"+selected, selected == E.betterAgent)
     // alert("selected =" + selected)
     // alert("better agent =" + E.betterAgent)
     if (selected == E.betterAgent) {
@@ -369,54 +392,84 @@ function onContinue() {
                 E.currentPair = E.pairs[E.currAgentPairIdx]
                 E.currAgentPairIdx++;
                 $("#selectRound").text(parseInt(E.currAgentPairIdx));
+                // gifs = [E.currentPair[0], E.currentPair[1]]
+                E.betterAgent = E.currentPair[1].agent
+                shuffleArray(E.currentPair) //randomize which gif goes where
+                $("#pacmanAgif").attr("src","images/startPacman.bmp");
+                document.getElementById('agentSelection').options[1].value = E.currentPair[0].agent;
+                $( "#pacmanAgif").unbind( "click" );
+                $('#pacmanAgif').on({
+                    'click': function(){
+                        $('#pacmanAgif').attr('src',"images/"+E.currentPair[0].file+ ".gif");
+                        servlog("clikedVideoA",E.currentPair[0].agent)
+
+                    }
+                });
+
+                $("#pacmanBgif").attr("src","images/startPacman.bmp");
+                $( "#pacmanBgif").unbind( "click" );
+                document.getElementById('agentSelection').options[2].value = E.currentPair[1].agent;
+                $('#pacmanBgif').on({
+                    'click': function(){
+                        $('#pacmanBgif').attr('src',"images/"+E.currentPair[1].file+ ".gif");
+                        servlog("clikedVideoB",E.currentPair[1].agent)
+
+
+                    }
+                });
+
+
+
                 //randomize which gif goes on left and which goes on the right
-                if (Math.random()<0.5) {
-                    $("#pacmanAgif").attr("src","images/startPacman.bmp");
-                    document.getElementById('agentSelection').options[1].value = E.currentPair[0];
-                    $( "#pacmanAgif").unbind( "click" );
-                    $('#pacmanAgif').on({
-                        'click': function(){
-                            $('#pacmanAgif').attr('src',"images/"+E.currentPair[0]+ ".gif");
-                            servlog("clikedVideoA",E.currentPair[0])
-
-                        }
-                    });
-                    $("#pacmanBgif").attr("src","images/startPacman.bmp");
-                    $( "#pacmanBgif").unbind( "click" );
-                    document.getElementById('agentSelection').options[2].value = E.currentPair[1];
-                    $('#pacmanBgif').on({
-                        'click': function(){
-                            $('#pacmanBgif').attr('src',"images/"+E.currentPair[1]+ ".gif");
-                            servlog("clikedVideoB",E.currentPair[1])
-
-
-                        }
-                    });
-                    E.betterAgent = E.currentPair[1]; //set the correct answer
-                }
-                else {
-                    $("#pacmanAgif").attr("src","images/startPacman.bmp");
-                    document.getElementById('agentSelection').options[1].value = E.currentPair[1];
-                    $( "#pacmanAgif").unbind( "click" );
-                    $('#pacmanAgif').on({
-                        'click': function(){
-                            $('#pacmanAgif').attr('src',"images/"+E.currentPair[1]+ ".gif");
-                            servlog("clikedVideoA",E.currentPair[1]);
-                        }
-                    });
-                    $("#pacmanBgif").attr("src","images/startPacman.bmp");
-                    document.getElementById('agentSelection').options[2].value = E.currentPair[0];
-                    $( "#pacmanBgif").unbind( "click" );
-                    $('#pacmanBgif').on({
-                        'click': function(){
-                            $('#pacmanBgif').attr('src',"images/"+E.currentPair[0]+ ".gif");
-                            servlog("clikedVideoB",E.currentPair[0])
-                        }
-                    });
-                    E.betterAgent = E.currentPair[1]; //set the correct answer
-                    servlog("currPair",E.currentPair);
-
-                }
+                //////////OLD/////////////////////////////
+                // if (Math.random()<0.5) {
+                //     $("#pacmanAgif").attr("src","images/startPacman.bmp");
+                //     document.getElementById('agentSelection').options[1].value = E.currentPair[0];
+                //     $( "#pacmanAgif").unbind( "click" );
+                //     $('#pacmanAgif').on({
+                //         'click': function(){
+                //             $('#pacmanAgif').attr('src',"images/"+E.currentPair[0]+ ".gif");
+                //             servlog("clikedVideoA",E.currentPair[0])
+                //
+                //         }
+                //     });
+                //     $("#pacmanBgif").attr("src","images/startPacman.bmp");
+                //     $( "#pacmanBgif").unbind( "click" );
+                //     document.getElementById('agentSelection').options[2].value = E.currentPair[1];
+                //     $('#pacmanBgif').on({
+                //         'click': function(){
+                //             $('#pacmanBgif').attr('src',"images/"+E.currentPair[1]+ ".gif");
+                //             servlog("clikedVideoB",E.currentPair[1])
+                //
+                //
+                //         }
+                //     });
+                //     E.betterAgent = E.currentPair[1]; //set the correct answer
+                // }
+                // else {
+                //     $("#pacmanAgif").attr("src","images/startPacman.bmp");
+                //     document.getElementById('agentSelection').options[1].value = E.currentPair[1];
+                //     $( "#pacmanAgif").unbind( "click" );
+                //     $('#pacmanAgif').on({
+                //         'click': function(){
+                //             $('#pacmanAgif').attr('src',"images/"+E.currentPair[1]+ ".gif");
+                //             servlog("clikedVideoA",E.currentPair[1]);
+                //         }
+                //     });
+                //     $("#pacmanBgif").attr("src","images/startPacman.bmp");
+                //     document.getElementById('agentSelection').options[2].value = E.currentPair[0];
+                //     $( "#pacmanBgif").unbind( "click" );
+                //     $('#pacmanBgif').on({
+                //         'click': function(){
+                //             $('#pacmanBgif').attr('src',"images/"+E.currentPair[0]+ ".gif");
+                //             servlog("clikedVideoB",E.currentPair[0])
+                //         }
+                //     });
+                //     E.betterAgent = E.currentPair[1]; //set the correct answer
+                //     servlog("currPair",E.currentPair);
+                //
+                // }
+                //////////END OLD/////////////////////////////
 				$("#experiment.page").show()
                 $("#preferenceInstructions").hide();
                 $("#selectionInstructions").show();
