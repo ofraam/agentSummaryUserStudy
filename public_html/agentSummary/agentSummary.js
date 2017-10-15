@@ -106,6 +106,28 @@ $(document).ready(function() {
 	onContinue();
 });
 
+function chooseRandomGifs() {
+    gifIdx = Math.floor(Math.random() * 12);
+    // alert(gifIdx)
+    for (i=0;i<E.pairs.length;i++) {
+        for (j=0;j<E.pairs[i].length;j++) {
+            if (E.pairs[i][j].summary=="random" & gifIdx>0) {
+                E.pairs[i][j].file = "randomVideos/"+E.pairs[i][j].agent+"/merged5_"+gifIdx;
+                // alert(E.pairs[i][j].file)
+            }
+        }
+    }
+
+    for (i=0;i<E.summaryPairs.length;i++) {
+        for (j=0;j<E.summaryPairs[i].length;j++) {
+            if (E.summaryPairs[i][j].summary=="random" & gifIdx>0) {
+                E.summaryPairs[i][j].file = "randomVideos/"+E.summaryPairs[i][j].agent+"/merged5_"+gifIdx;
+                // alert(E.summaryPairs[i][j].file)
+            }
+        }
+    }
+}
+
 function initialize_experiment() {
 	$(document).ajaxError(abortAll);
 
@@ -135,6 +157,7 @@ function initialize_experiment() {
     }
     E.pairs = shuffleArray(E.pairs); // randomly order the pairs we show users
     E.summaryPairs = shuffleArray(E.summaryPairs); // randomly order the pairs we show users
+    chooseRandomGifs();
     $("#prefTotalRounds").text(parseInt(E.summaryPairs.length));
     // alert(E.summaryPairs.length)
     $("#selectTotalRounds").text(parseInt(E.pairs.length));
