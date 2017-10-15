@@ -54,14 +54,18 @@ E.comparisons = {
 E.summaryComp = {
     pairs5: [ //the one on the right is always the better agent
         // ["merged5f200","merged5r200"],
-        ["merged5f200","merged5m200"],
-        ["merged5r200","merged5m200"],
+        [{summary: "first", agent: "400", file:"merged5f400"},{summary: "max", agent: "400", file: "merged5m400"}],
+        [{summary: "random", agent: "400", file:"merged5r400"},{summary: "max", agent: "400", file: "merged5m400"}],
+        [{summary: "first", agent: "2000", file:"merged5f2000"},{summary: "max", agent: "2000", file: "merged5m2000"}],
+        [{summary: "random", agent: "2000", file:"merged5r2000"},{summary: "max", agent: "2000", file: "merged5m2000"}]
+        // ["merged5f200","merged5m200"],
+        // ["merged5r200","merged5m200"],
         // ["merged5f400","merged5r400"],
         // ["merged5f400","merged5m400"],
         // ["merged5r400","merged5m400"],
         // ["merged5f2000","merged5r2000"],
-        ["merged5f2000","merged5m2000"],
-        ["merged5r2000","merged5m2000"]
+        // ["merged5f2000","merged5m2000"],
+        // ["merged5r2000","merged5m2000"]
     ],
     pairs10: [
         ["merged10f200","merged10r200"],
@@ -292,8 +296,8 @@ function submit_preference() {
     }
     var explanationPref = $("#prefExpText").val()
 
-    servlog("preference_"+E.currentPair[0]+"_"+E.currentPair[1], pref);
-    servlog("preferenceExplanation_"+E.currentPair[0]+"_"+E.currentPair[1], explanationPref);
+    servlog("preference_"+E.currentPair[0].agent+"_"+E.currentPair[0].summary+"_"+E.currentPair[1].summary, pref);
+    servlog("preferenceExplanation_"+E.currentPair[0].agent+"_"+E.currentPair[0].summary+"_"+E.currentPair[1].summary, explanationPref);
     if (E.currAgentPairIdx<E.summaryPairs.length) {
         $("#prefExpText").val("")
         $('input[name=helpful]:checked', '#experiment').prop("checked",false);
@@ -488,7 +492,7 @@ function onContinue() {
             E.endTime=msTime();
             if (!E.selectionsCompleted) {
                 var timeSelection = E.endTime-E.startTime
-                servlog("timeSelection_"+E.currentPair[0]+"_"+E.currentPair[1], timeSelection);
+                servlog("timeSelection_"+E.currentPair[0].summary+"_"+E.currentPair[0].agent+"_"+E.currentPair[1].agent, timeSelection);
                 submit_selection();
             }
             if (onContinue.curPage==6) {
@@ -500,16 +504,16 @@ function onContinue() {
                 $( "#pacmanAgif").unbind( "click" );
                 $('#pacmanAgif').on({
                     'click': function(){
-                        $('#pacmanAgif').attr('src',"images/"+E.currentPair[0]+ ".gif");
-                        servlog("clikedVideoA",E.currentPair[0])
+                        $('#pacmanAgif').attr('src',"images/"+E.currentPair[0].file+ ".gif");
+                        servlog("clikedVideoA",E.currentPair[0].summary)
                     }
                 });
                 $("#pacmanBgif").attr("src","images/startPacman.bmp");
                 $( "#pacmanBgif").unbind( "click" );
                 $('#pacmanBgif').on({
                     'click': function(){
-                        $('#pacmanBgif').attr('src',"images/"+E.currentPair[1]+ ".gif");
-                        servlog("clikedVideoB",E.currentPair[1])
+                        $('#pacmanBgif').attr('src',"images/"+E.currentPair[1].file+ ".gif");
+                        servlog("clikedVideoB",E.currentPair[1].summary)
                     }
                 });
                 $("#experiment.page").show()
@@ -529,7 +533,7 @@ function onContinue() {
             E.endTime=msTime();
             if (!E.preferenceCompleted) {
                 var timePreference = E.endTime-E.startTime
-                servlog("timePreference_"+E.currentPair[0]+"_"+E.currentPair[1], timePreference);
+                servlog("timePreference_"+E.currentPair[0].agent+"_"+E.currentPair[0].summary+"_"+E.currentPair[1].summary, timePreference);
                 submit_preference();
             }
 

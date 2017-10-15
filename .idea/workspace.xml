@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09a7b1f5-4d82-41b0-9b10-5c529e8ae6a6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/allOct9pacman5trajectories_filtered.xlsx" afterPath="$PROJECT_DIR$/results/allOct9pacman5trajectories_filtered.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/agentSummary/agentSummary.js" afterPath="$PROJECT_DIR$/public_html/agentSummary/agentSummary.js" />
     </list>
     <ignored path="agentSummaryExperiment.iws" />
@@ -44,8 +42,8 @@
       <file leaf-file-name="agentSummary.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public_html/agentSummary/agentSummary.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="57" column="33" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
+            <state relative-caret-position="191">
+              <caret line="494" column="65" selection-start-line="494" selection-start-column="65" selection-end-line="494" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -333,12 +331,12 @@
       <option name="presentableId" value="Default" />
       <updated>1507367383349</updated>
       <workItem from="1507367384607" duration="34666000" />
-      <workItem from="1508079286604" duration="3085000" />
+      <workItem from="1508079286604" duration="3536000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37751000" />
+    <option name="totallyTimeSpent" value="38202000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1365" height="726" extended-state="0" />
@@ -497,8 +495,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/agentSummary/agentSummary.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="57" column="33" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
+        <state relative-caret-position="191">
+          <caret line="494" column="65" selection-start-line="494" selection-start-column="65" selection-end-line="494" selection-end-column="65" />
           <folding />
         </state>
       </provider>
