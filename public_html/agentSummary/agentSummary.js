@@ -29,9 +29,12 @@ E.comparisons = {
     //     {summary: "random", agent1: "400", agent2: "2000", file1:"merged5r400", file2: "merged5r2000"}
     // ],
     pairs5: [ //the one on the right is always the better agent
-        [{summary: "first", agent: "200", file:"merged5f200"},{summary: "first", agent: "2000", file: "merged5f2000"}],
-        [{summary: "first", agent: "200", file:"merged5f200"},{summary: "first", agent: "400", file: "merged5f400"}],
-        [{summary: "first", agent: "400", file:"merged5f400"},{summary: "first", agent: "2000", file: "merged5f2000"}],
+        // [{summary: "first", agent: "200", file:"merged5f200"},{summary: "first", agent: "2000", file: "merged5f2000"}],
+        // [{summary: "first", agent: "200", file:"merged5f200"},{summary: "first", agent: "400", file: "merged5f400"}],
+        // [{summary: "first", agent: "400", file:"merged5f400"},{summary: "first", agent: "2000", file: "merged5f2000"}],
+        [{summary: "maxdiv", agent: "200", file:"merged5md200"},{summary: "maxdiv", agent: "2000", file: "merged5f2000"}],
+        [{summary: "maxdiv", agent: "200", file:"merged5md200"},{summary: "maxdiv", agent: "400", file: "merged5md400"}],
+        [{summary: "maxdiv", agent: "400", file:"merged5md400"},{summary: "maxdiv", agent: "2000", file: "merged5md2000"}],
         [{summary: "max", agent: "200", file:"merged5m200"},{summary: "max", agent: "2000", file: "merged5m2000"}],
         [{summary: "max", agent: "200", file:"merged5m200"},{summary: "max", agent: "400", file: "merged5m400"}],
         [{summary: "max", agent: "400", file:"merged5m400"},{summary: "max", agent: "2000", file: "merged5m2000"}],
@@ -54,9 +57,11 @@ E.comparisons = {
 E.summaryComp = {
     pairs5: [ //the one on the right is always the better agent
         // ["merged5f200","merged5r200"],
-        [{summary: "first", agent: "400", file:"merged5f400"},{summary: "max", agent: "400", file: "merged5m400"}],
+        // [{summary: "first", agent: "400", file:"merged5f400"},{summary: "max", agent: "400", file: "merged5m400"}],
+        [{summary: "maxdiv", agent: "400", file:"merged5md400"},{summary: "max", agent: "400", file: "merged5m400"}],
         [{summary: "random", agent: "400", file:"merged5r400"},{summary: "max", agent: "400", file: "merged5m400"}],
-        [{summary: "first", agent: "2000", file:"merged5f2000"},{summary: "max", agent: "2000", file: "merged5m2000"}],
+        // [{summary: "first", agent: "2000", file:"merged5f2000"},{summary: "max", agent: "2000", file: "merged5m2000"}],
+        [{summary: "maxdiv", agent: "2000", file:"merged5md2000"},{summary: "max", agent: "2000", file: "merged5m2000"}],
         [{summary: "random", agent: "2000", file:"merged5r2000"},{summary: "max", agent: "2000", file: "merged5m2000"}]
         // ["merged5f200","merged5m200"],
         // ["merged5r200","merged5m200"],
