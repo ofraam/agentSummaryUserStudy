@@ -32,7 +32,7 @@ E.comparisons = {
         // [{summary: "first", agent: "200", file:"merged5f200"},{summary: "first", agent: "2000", file: "merged5f2000"}],
         // [{summary: "first", agent: "200", file:"merged5f200"},{summary: "first", agent: "400", file: "merged5f400"}],
         // [{summary: "first", agent: "400", file:"merged5f400"},{summary: "first", agent: "2000", file: "merged5f2000"}],
-        [{summary: "maxdiv", agent: "200", file:"merged5md200"},{summary: "maxdiv", agent: "2000", file: "merged5fmd2000"}],
+        [{summary: "maxdiv", agent: "200", file:"merged5md200"},{summary: "maxdiv", agent: "2000", file: "merged5md2000"}],
         [{summary: "maxdiv", agent: "200", file:"merged5md200"},{summary: "maxdiv", agent: "400", file: "merged5md400"}],
         [{summary: "maxdiv", agent: "400", file:"merged5md400"},{summary: "maxdiv", agent: "2000", file: "merged5md2000"}],
         [{summary: "max", agent: "200", file:"merged5m200"},{summary: "max", agent: "2000", file: "merged5m2000"}],
