@@ -1,0 +1,94 @@
+﻿/* JMP 12.0.1   01 */
+ListBox(vertical,near,sub(
+PictureBox(sub(
+BorderBox(top(1),left(1),bottom(1),right(1),sides(0),options(0),xmin(0),ymin(0),sub(
+ScaleBox(id(3100),length(20),baselength(20),sub(
+ScaleBox(id(4100),length(18),baselength(18),sub(
+ScaleBox(id(1100),length(484),baselength(484),sub(
+ScaleBox(id(3200),length(31),baselength(31),sub(
+ScaleBox(id(4200),length(18),baselength(18),sub(
+ScaleBox(id(1200),length(392),baselength(392),sub(
+ScaleBox(id(100),axis(scaleType(0),scaleOrig(-0.5),scaleWidth(3),widthMajor(1),
+nbin(3),nminor(0),timeCode(0),ndec(0),FieldWidth(10),
+MinInit(-0.5),MaxInit(2.5),LinearInit,MajorInit(1),MinorInit(0),NObsInit(0),
+options(),scaleTypeOptions(),nLabelRows(1),labelRows(LabelRowCategorical(options(4096),Automatic Font Size(1),Show Major Grid(0),Label Orientation("Automatic"),Automatic Tick Marks(1),Inside Ticks(0),Show Major Ticks(0),Show Major Labels(1),Lower Frame(0),Major Grid Line Color(-14145495),Tick Mark Style("Long Mark"),axisTick(type(2),label("200E vs. 400E"),value(-0.5),width(1),),axisTick(type(2),label("400E vs. 2000E"),value(0.5),width(1),),axisTick(type(2),label("200E vs. 2000E"),value(1.5),width(1),),),),),length(-1),baselength(-1),charid("comparisonType"),sub(
+ScaleBox(id(200),axis(scaleType(0),scaleOrig(0),scaleWidth(8),widthMajor(1),
+nbin(8),nminor(0),timeCode(0),ndec(1),ndecimals(0),ndecSpec(99),FieldWidth(10),
+MinInit(0),MaxInit(8),LinearInit,MajorInit(1),MinorInit(0),NObsInit(0),scaleTypeOptions(),nLabelRows(1),labelRows(LabelRowContinuous(options(0),Automatic Font Size(1),Show Major Grid(0),Label Orientation("Automatic"),Automatic Tick Marks(1),Inside Ticks(0),Show Major Ticks(1),Show Major Labels(1),Tick Offset(0),Major Grid Line Color(-14145495),Show Minor Ticks(1),Show Minor Labels(0),Show Minor Grid(0),Minor Grid Line Color(-15790320),),),),length(-1),baselength(-1),charid("value"),sub(
+ScaleBox(id(150),axis(scaleType(0),scaleOrig(0),scaleWidth(0),widthMajor(1),
+nbin(1),nminor(0),timeCode(0),ndec(0),FieldWidth(0),
+MinInit(0),MaxInit(0),LinearInit,MajorInit(1),MinorInit(0),NObsInit(0),scaleTypeOptions(),nLabelRows(1),labelRows(LabelRowContinuous(options(0),Automatic Font Size(1),Show Major Grid(0),Label Orientation("Automatic"),Automatic Tick Marks(1),Inside Ticks(0),Show Major Ticks(1),Show Major Labels(1),Tick Offset(0),Major Grid Line Color(-14145495),Show Minor Ticks(1),Show Minor Labels(0),Show Minor Grid(0),Minor Grid Line Color(-15790320),),),),length(-1),baselength(-1),sub(
+ScaleBox(id(250),axis(scaleType(0),scaleOrig(0),scaleWidth(0),widthMajor(1),
+nbin(1),nminor(0),timeCode(0),ndec(0),FieldWidth(0),
+MinInit(0),MaxInit(0),LinearInit,MajorInit(1),MinorInit(0),NObsInit(0),scaleTypeOptions(),nLabelRows(1),labelRows(LabelRowContinuous(options(0),Automatic Font Size(1),Show Major Grid(0),Label Orientation("Automatic"),Automatic Tick Marks(1),Inside Ticks(0),Show Major Ticks(1),Show Major Labels(1),Tick Offset(0),Major Grid Line Color(-14145495),Show Minor Ticks(1),Show Minor Labels(0),Show Minor Grid(0),Minor Grid Line Color(-15790320),),),),length(-1),baselength(-1),sub(
+ScaleBox(id(400),length(-1),baselength(-1),nmodels(1),model(id(6),n(3),name("summary"),levels("First","HIGHLIGHTS","Random"),types(32,32,32),properties(properties(line(color(-4222943), style(Dotted)),fill color(2147483647),fill pattern(ID("left slant light"),),),,properties(line(color(-13977687)),fill color(2147483647),),,properties(line(color(-3780931), style(Dashed)),fill color(2147483647),),),,),sub(
+ListBox(horizontal,near,sub(
+ListBox(vertical,near,sub(
+CenterBox(horiz,sizeID(1100,0,1,1,43,0),boxcentering(1,0),sub(
+TextEditBox(default font id(2),nameid("graph title/value vs. comparisonType"),wrapWidth(570),justification(1),))),
+ListBox(horizontal,near,sub(
+ListBox(vertical,near,sub(
+CenterBox(vert,sizeID(4200,1200),boxcentering(0,1),sub(
+TextEditBox(default font id(9),nameid("Y title/value"),wrapWidth(392),justification(1),left,))))),
+ListBox(vertical,near,sub(
+AxisBox(side(R),size(31,392),locked(false),scales(3200,1200,0,200),))),
+ListBox(vertical,near,sub(
+ListBox(horizontal,near,sub(
+FrameBox(size(484,392),border(12303),flags(0),markerSize(-1),right scales(1100,1200,100,250),scales(1100,1200,100,200),seg(
+,SegPlaceholder(description("Grid Lines"),),SegPlaceholder(description("Reference Lines"),),BoxPlotSeg(description("Box Plot (first, 1)"),legend server ID(400),legend model ID(6),legend model item(0),schematic,vertical,
+quantiles(7,7,7,7,6,5,4,2.1,1,1,
+1),moments(4.85,1.64160646772355,0.259560772983505,5.37501121871146,4.32498878128854,40,40),adjacents(1,7,3,5),position(-0.333333333333333),width(0.333333333333333),ConfidenceDiamond(0),ShortestHalf(0),lineColor(-4222943),lineStyle(1),lineWidth(1),transparency(1),),BoxPlotSeg(description("Box Plot (first, 2)"),legend server ID(400),legend model ID(6),legend model item(0),schematic,vertical,
+quantiles(7,7,7,7,5,4,3,2,1,1,
+1),moments(4.15,1.57789213501544,0.249486652435736,4.65463438655213,3.64536561344787,40,40),adjacents(1,7,4,5),position(0.666666666666667),width(0.333333333333333),ConfidenceDiamond(0),ShortestHalf(0),lineColor(-4222943),lineStyle(1),lineWidth(1),transparency(1),),BoxPlotSeg(description("Box Plot (first, 3)"),legend server ID(400),legend model ID(6),legend model item(0),schematic,vertical,
+quantiles(7,7,7,7,6,5,4,3,2.025,2,
+2),moments(4.925,1.36602549062074,0.215987594610526,5.36187614645929,4.48812385354071,40,40),adjacents(2,7,4,5),position(1.66666666666667),width(0.333333333333333),ConfidenceDiamond(0),ShortestHalf(0),lineColor(-4222943),lineStyle(1),lineWidth(1),transparency(1),),BoxPlotSeg(description("Box Plot (max, 1)"),legend server ID(400),legend model ID(6),legend model item(1),schematic,vertical,
+quantiles(7,7,7,7,6,5,4,3,1.05,1,
+1),moments(4.8,1.41783511391713,0.224179415327122,5.25344566784132,4.34655433215868,40,40),adjacents(1,7,3,5),position(-2.77555756156289e-17),width(0.333333333333333),ConfidenceDiamond(0),ShortestHalf(0),lineColor(-13977687),lineStyle(0),lineWidth(1),transparency(1),),BoxPlotSeg(description("Box Plot (max, 2)"),legend server ID(400),legend model ID(6),legend model item(1),schematic,vertical,
+quantiles(7,7,7,7,6,6,5,4,3,3,
+3),moments(5.53846153846154,0.995943188142826,0.159478544012063,5.86130897222874,5.21561410469434,39,39),adjacents(4,7,5,6),position(1),width(0.333333333333333),ConfidenceDiamond(0),ShortestHalf(0),lineColor(-13977687),lineStyle(0),lineWidth(1),transparency(1),),MarkerSeg(description("Outliers (max, 2)"),n(1),nv(1),MarkerItem(x(1),y(3),),states(rs(0,Dot,2147483647)),lastSelectedCount(120),),BoxPlotSeg(description("Box Plot (max, 3)"),legend server ID(400),legend model ID(6),legend model item(1),schematic,vertical,
+quantiles(7,7,7,7,7,6,5,4.1,3.025,3,
+3),moments(5.8,1.06698713134767,0.168705478457395,6.14123903943623,5.45876096056377,40,40),adjacents(3,7,5,6),position(2),width(0.333333333333333),ConfidenceDiamond(0),ShortestHalf(0),lineColor(-13977687),lineStyle(0),lineWidth(1),transparency(1),),BoxPlotSeg(description("Box Plot (random, 1)"),legend server ID(400),legend model ID(6),legend model item(2),schematic,vertical,
+quantiles(7,7,7,7,6,5,5,4,2,2,
+2),moments(5.35,1.21000105954605,0.191317965969127,5.73697711260566,4.96302288739434,40,40),adjacents(4,7,5,6),position(0.333333333333333),width(0.333333333333333),ConfidenceDiamond(0),ShortestHalf(0),lineColor(-3780931),lineStyle(2),lineWidth(1),transparency(1),),MarkerSeg(description("Outliers (random, 1)"),n(3),nv(1),MarkerItem(x(0.334803155227564,0.32422692849068,0.340016154490877),y(2,3,2),),states(rs(1,Dot,2147483647),rs(1,Dot,2147483647),rs(1,Dot,2147483647)),lastSelectedCount(120),),BoxPlotSeg(description("Box Plot (random, 2)"),legend server ID(400),legend model ID(6),legend model item(2),schematic,vertical,
+quantiles(7,7,7,7,6.75,5,4,3,2,2,
+2),moments(5.175,1.46563191937025,0.231736753832712,5.64373182781622,4.70626817218378,40,40),adjacents(2,7,3,5),position(1.33333333333333),width(0.333333333333333),ConfidenceDiamond(0),ShortestHalf(0),lineColor(-3780931),lineStyle(2),lineWidth(1),transparency(1),),BoxPlotSeg(description("Box Plot (random, 3)"),legend server ID(400),legend model ID(6),legend model item(2),schematic,vertical,
+quantiles(7,7,7,7,6,5,4,3,2.025,2,
+2),moments(5.175,1.33757338643626,0.211488921938158,5.60277672209268,4.74722327790732,40,40),adjacents(2,7,5,6),position(2.33333333333333),width(0.333333333333333),ConfidenceDiamond(0),ShortestHalf(0),lineColor(-3780931),lineStyle(2),lineWidth(1),transparency(1),))))))))),
+ListBox(horizontal,near,sub(
+ListBox(horizontal,near,sub(
+SpacerBox(size(18,1),minSize(1,1),maxSize(18,1),BaseSize(1,1),fillColor(2147483647),sizeID(4200,0),xstretching(0),),
+SpacerBox(size(31,1),minSize(1,1),maxSize(31,1),BaseSize(1,1),fillColor(2147483647),sizeID(3200,0),xstretching(0),))),
+ListBox(vertical,near,sub(
+ListBox(horizontal,near,sub(
+AxisBox(side(T),size(484,20),locked(false),scales(1100,3100,100,0),))),
+ListBox(horizontal,near,sub(
+CenterBox(horiz,sizeID(1100,4100),boxcentering(1,0),sub(
+TextEditBox(default font id(9),nameid("X title/comparisonType"),wrapWidth(484),justification(1),))))))))))),
+SpacerBox(size(4,1),minSize(4,1),maxSize(4,1),BaseSize(4,1),fillColor(2147483647),),
+LegendBox(name("Summary method"),Flags(2),vertical(true),title vertical(true),legendid(400),N Legends(3),Legend item(type(32),width(20),properties(line(color(-4222943), style(Dotted)),fill color(2147483647),fill pattern(ID("left slant light"),),),states(rs(0,Dot,2147483647)),Line Style(1),Line Color(-4222943),label("First"),),Legend item(type(32),width(20),properties(line(color(-13977687)),fill color(2147483647),),states(rs(0,Dot,2147483647)),Line Color(-13977687),label("HIGHLIGHTS"),),Legend item(type(32),width(20),properties(line(color(-3780931), style(Dashed)),fill color(2147483647),),states(rs(0,Dot,2147483647)),Line Style(2),Line Color(-3780931),label("Random"),),size(112,79),)))))))))))))))))))))))))))))))
+/* preview image PNG (v=1,x=300,y=300,b=6075,c=96,d=126,e=42,f=92,g=59,h=34,i=39,j=47,k=44,m=A8C402FFBC0EFA0D1710CB57F53694CB)
+=v}uA%:{<d&52G3ALL(O-EQuCZhM1v!!!84.L)zt!!!!3=wLI4kK=3<!!-=)<#fB$!!$Abz!YXr!!!67>>vs>!!&+I!!)vNhz_)n!0h%N>Vo8)Mb<{{pylc0N5>Lrj3=(_0F#8xL=-AIJiW]<VCy(IHhd}X[f=-[+<]|#6oPIz+YyO>>cA5O#WTHw8|qN|Xov+w(Xk]Zp-VjiD9x(eV|TL3mi$lFo^j9g6SCB[u@IVe6b!7KyC>{{_XL!Fiqv?79U@a&!+w&)&6(F&Zk:.Y1FokZIs-RHU>wQB!!+H.!$kNZ#&#v7HRf(I$pe6_-f$0q
+G1ta+P1pJT!!d.u!=<fm-G5=Z<>p+4=haW8nh7#k0?7q]hmCMgT}pPTe498Rx%?nF1tl|B_I|2IDd[&8U9RKiI!:nuZK%t%TBs4S-QLu8owEc#B9eW08O(Zh2qieP!!+H5AwZed0&z_fS#w.QBh]|v@_lhutg9>Givd3QdZgJkZ#Iv.w[9qm][-[>4xr7W%kAJNEI3SWpAF}oNDAi6m!Q6tl[|G+lyE$Elkadfm.%D}UpDZUliu#$lplyeW0g.Em+B9(m!P>DWjJr=XgB&6WLoM.Uo{6iXIyHwYdL!!VOeQ@lVi!Gdv@.mo5_:toOo7X
+H:21Zul7H=e|RB7f]F3p2AGN42r|bs<)jx2RJu)%[_jA@-hzeJ!^Ce#h{gyYtC83oHx1OX0)elvKZPc!%qoQj[O%b_6pB(+HDf]kLaFE!@?7^(%qoQjr%KipawaGIxy2G7!SS^$P7:#H&|%Fh+LTfV[}Y?J#&!x15V1|Cqx@ba)VlYbGN7j-hnF|[s#cMYU@P#AR<(}MFCYF-s]I2yMmN=Doc3(s!#HB{Qe49<$-!9Tl$4A9(cJH@7L&<di>kB4!!%d&!#H9m!SRMZ6iET7QVb4CTQC1Kb7iuU:WJe=!!DVM!10rI&6+]mZk:.Y1FokZ
+Is-RHU>wQB!!+H.!$kNZ#&#v7HRf(I$pe6_-f$0qG1ta+P1pJT!!d.u!=<fm-G5=Z<>p+4=haW8nh7#k0?7q]!!4k9!(Vx7$-%nIl$L0mCoG$25BGq=VdHZj4ZJs&yyw}1!!DV-)F@BL3e+cZI!9RW8Am<CR(gBHA:+R7jPtYCZie5v6OJ2IE^jd2HcTg!Cv&|7#&!.XZUqq_WID+V2W7na%-t2ZW:HZ7tMmWmhn6u=Xi7e9!$kIo%r4&=9RLlFkuFwZQ?gfmIF9)cr>TKL:Jm_<ZGeZvjU3QFUpUwvJ$WAFxdPd!nJ5#SvMdu]xk@a>
+zn7!e_4s9^KZVU>U9X-#uAO&Hx$1c[g_pOR6UiOS9.s6RYG4LmV3nje?9#o6[q9rNlfVg&HnsgSo3+T!yj:n#KjYhfM#s(PMFe2Lxd&B=&Y^Bqgh9AH%%yXCXi=:r-H.?4HXheSRIN+6(K5R#K2x-8.)jJd2H4IkyLF7UP&ouTl$=<NNlsV<48utLgq:%0ecV9XO<uV&<B%L4-GDVt<Kv^KsX}rRx:Qf|?QDXy%sm+O25lB>-?_GXu7G(JnW-z_5S7DuWwTNg!iFQvlF|-:so==YO8eX->kc<vk|5fFb|Ymi2wB_xCLmj]2@@=[S91|<
+ZhY%x&8@V_$.2yJlFo]BSc$%#VWFRr=sm[G<D8Z@-G2KdVdENwj#n#Z+.ML_.QdcH0.gok&6)>!6peC<&Z4{7+5]3>$lLK+&6--.:dTs20myFZW}d5#HRY4![O%R{r]o8++4fr7$lLK+6mh_h2^Z2P(4t2t@67M14D6G3(Xsq4H[QAP-IH3&=aJ+:CDa6o:Z7fF<[tg>XUnF+!h5-_ZkIvH&64kL6peC<&Z4{7SfferQTTkU6r7:[6s#E.0Dj@jUU?iAeQ(NBQT]|K6i?rHCD]=qat[UZ?YYT9[6-7%!SR?0R:kPJgr#r%QT[l-6i?rH
+30)loVi|u748utA(TVP6$lZ+SHRXflg9sN{!13lx&7wl+l?|GZ1tp^LX66(M2D?]{QL)uf$-&&&0DjL)UU?iAeQ(NB<=my|-G2Kd302e^303lKCLmj]2@@=[kRHx<-G2VXF.rnIl?|Ce14idCl9}[{=a}uQh!6t|b:VVJ8|D1g-G2U!HcJaQ.7DxI+4n?e&)eq1m+2E1=c44o]<6(}.uie:N[i&GbFjR]G]fl%f?UFs%<X?_6xsmsl9qyw6mkA-1XjB?hg$MV8?%ae)GD?l[Zqp}+ozX4Vm01vD(oB17ew:5Z%i?IS7.S0<&]wAll#q.
+jPwSqnUvkxl#+E2$-+H8l#!uqVG4{#LcrQ.-1Fj1u7FAva=6v4l$5D<(2k<m^M4IUMs%bQkxkxsj4]FqB)mcRvSVS6.kF&owX:[bkph!Fw-#QBNM:h{aOV1YWlir]?UhG:gw:2Rpil$-o8-EL4+9Oli0%{?^[KW$uBOHbx$1cwg_pORx@&]@w_hioOg^OANj_J_erM](ptg2oJhD@!MSIzSTY^ODN0IJsyqgx5bi0B#Nj6]oZD3cMMeOEI?M|mS?6LsXwkhYS94Ivq1CD7#wK>u3HD@_JO4|=%I&+HUJ4m{Cdi>EkfGP26.1(+k?J({#
+oiI2Q-H.N.ugPlRQMiilQO+d4$-!@VTE0TIN>:2X=g_qpdz]?l2EJa6-G+fIFu[67LW9&o@Q}%4)8JR><V9[)kMk}fRvl?R!SQzI(O4!K71A66l(7AVFv62tso==Y7j(_fUD%ttv>xa@dI7FL:.T6Q=-_0^HcKDd>em5C+f!.NGcN1Sl&9hA#&@Iq^<o-J1OJ2UTt-]pZhY%xR{]S%2r-tfX(PGgHFL:%3&Z#+QK5G^=bVM^R:+0B5y2TR0G-_e-IExrTC>:HL{m[R$YSaK=aPX@[O_5f(2M<BTD!%LT{@>dZhEvvlG.{J%{@t@#PE7A
+[65tiZyD.2Gswds1tp^L=CkEoX+mUoHREtZFdb<qh+vfY.OlS-P4Z!ZlLjJKHU^E(#&?yp^<o-J1OJ2UTt-]pZhY%xR{]S%2r-tfX(PGgHFL:%3&Z#+QK5G^=bVM^R:+0B5y2TR0G-_e-IExr&6Mat&LZHsTBnWaL&6p}-t$xc-G!!AM-c3S1.-yeA:!|NTu_^1)0G!q<8TyrlF|.LqR}tCt|5$!(6&Bq%y:fkH[NSv!10hG[65til->e1p([|<l#!$MHcVP7VdCSX2r-tWX(PGg6iHGF$.2Y@(aZ>(k&{h<PRI[oH[MiLHV:n%Sfa3Q
+=aIko9&D=R7pu)>l9y.B6i$Hru7FB%Z0-7{ZinLuft>[$pQ-4D<:}cq)kO]kQWhCo6i=|ja}36xl$WSQ&753V[O$.]@C:mLbn3[SHfHD0-G#6xTC>=1LJ3([<8+cllF|.LvHn.Q(JdF[<?zC-TFl#|jeOVoOx59mlLdkQFVnO#>kc<x8=0Z_h}P(Wl&9h>$.2zi(aZ>(k&{h<PRI[oH[MiLHV:n%Sfa3Q=aIko9&D=R7pu)>l9y.Bq&Xj)tJArC[6@0&6pebDdseZxP[nX$n$1RdlP8@eCeumpSSU>y]I(P0[(EaMdN8Ov-P4_jO?p=%
+lJox4?LV5Qxajjcx=<LrdLncyi<Z[RuBOB9x$1cwg_pORx@&]@w_hioOg^OANj_J_erM](ptg2oJhD@!MSIzSTY^ODXIZn<lfN_aX^mdsimd@qu%g>QX:Iq6KHupSAe<VaWe1i)c-xl|wQP<FaP.I(6k0Cy8irM.6k8Lu.!YHW5!2WFV[b%szF|#IO6TS[QRd8+hpMOg#&!bC)kObvQWhCoFw=YH!SQp46kVwQAxjl<Hz-T]6iVV)5yz0!W<>#4yYv6Y]9udZk|4}}h@I[rl&9h>#&$JQHS?@WcI!eu#R6g:hnF}h&Z4wfZk(p)N9=&b
+?_TpSTC#h+tLdK6T:ouzQTTkUr%O2ISC?C}hmnGzCLmj^=-g^Q<+wBwh!6ueL|1Bu-G6ccjd8L8=DSHa6mfsfu7EYr(_f}!l$4MX.1(#U5xxEJ2Slgq-IExr6l-?=Cd=6t14idC6r6E.HX6WSFuv0{48utB[65tiHcJlmT:ov+QTTkU[O(E_6K&Yc(Xsq4TD!%LDuD|.Sd%lDlLjJKb|S{I1AMx.Zjdj2HcPV8qS$OPt|5$!)=HrwTB|3YFv:HIsWC:uX(PH%6iHGFPI)PIhIDSg<?Fa{TD#OSat[U?S7O>}[O&&86K(DB(Xsq4TB|3Y
+6K&Z2phz-1=-g^QRY@?<3<Dm5CLmj]TtCPF&uzKPH[HKtRfi_<?T:cw-G6ccX.r[YSd%lCHS>eaFuv:!48utB[65tiZc>gNFQYyq8}(aMTBvvqGq.8Z14idC-IExr6l-?=T<5_}JsOUcZmOe_Hh$sr!13jJ)kOi<QWhCo-G<Bc^<oM<=yoB([6fqN0DjA|5qC]cHRkihFv66C48utBZmOe_FuvI_sWC:uX(PH%wPBrn2_$zk(4t2tn]u4Zsd#Y]).A&-!SRHrST&vN<?Fav-K[.^FQYyW%&_!1H[Kp#Rfi_<?T:cw-G6cc:dTh7Fdb=F
+ZkQu}hmoA=CLmj^^}As6-Jt4%8O(zP8ifRFN(^OJkeO5X[Zx9PP>UwbWID+VG)xL?6iVV)TEBK[ZLJVVTC1q1_}{-i742V&H[RQZ&W$QCbHSHkG]fl%f?UG3lG)N!kK6>P.PZA{=aMzK6K&Zm-3Kd=5BGpfVdHZjA8m$K@SG26Cv8VM6r6b(1XyPBX>=KU6k0G?RJon#?V20Z&JOERSqQ]BTC+h+Q?gfmIF9)cMPr>llMIGpU)R^YoG1Fdz9g928H|_fnG+v9jTdQnlr1d$4+GngzASfPv$TSPxYEw{yqCnZFlY-Y%phNYD4QtLJ-<^h
+p-nxoccj.DcbdDe9&qvhp:#}FuiGY<uyLtToa12jTBpb&7!|=hVCiNdnmoI}675VGqlmc&&W%F$@22U+hD(x1O7_QcjU86MEo(Olm:W.Q_z&zUzI7VMjR0LzTN%&I>!)sy]JR.u1_znpaM7rqONq?aK=aR0FTXv&<:b}&6me^<$-(y.!!d.|&7wrj23%Cv3Tn5<.QdcH=yH6EadP{zS6r?SFuaT8P7HyYK{FAzDta+fX66(O)3-#CZlp4w&8@V_#&Wv:6peRAW[3E]^3<e}QWFET(uaPGH[QAP&76(=lFq%9dlecGRef3_G7O{t?[G(D
+Q^)J_$-&&&-G<B[k|Po]0@Y}6UU?iUGFh8r>z.XD[6E-w6mi<&$-(y.!!d.|&7wrj23%Cv3Tn5<.QdcH=yH6EHS0)g<-&uNP7HzlK{FAzDta+fX66(O)3-#CZlp4w&8@V_#&Wv:6peRAW[3E]^3<e}QWFET(uaPGH[QAP&76(=lFq%9dlecGRef3_G7O{t?[G(DQ^)J_$-&&&-G<B[k|Po]0@Y}6UU?iUGFh8r>z.XD[6E-w6mi<&$-(y.!!d.|&7wrj23%Cv3Tn5<.QdcH=yH6EHS0)g<-&uNP7HzlK{FAzDta+fX66(O)3-#CZlp4w
+&8@V_#&Wv:ZjyU$horkPjw5NYc@z?D6<fj|HS^Bp$-Y)k<><y%?rdf{9=B.EMN%:nzHMSYU5YDf[Gbz|9G!exwm_phsVpE>Z8WtxqU|tiy4[[G:Q^5mrXm.#Em<|.Z9jnerbf1%uK:+yaQO_]y[DG=e-(%md-.rUMXd^2yLwxD9LhL+fHi6ZpKT.eC%CtTu42FMp})-):>VZM=4KjYZC_tsfxq5x6kMsgyK|>2US8.dyX}s1vFZ+|3P9+ky}:kvrjmOebSsbof>QFHxYj#_gl#tOkX_|hvxhBrkkjX@K:4Gbw_}v:^S9nCEp95yHK5L8
+va&_Z>XOJZ=3KH>el>-Z$W?1NcO(9bj5(4iE^_SZ[TRtpzr)R12m.+#ZCu-__4b%zKr..qSxJAjwK)4GYVVvwzHKyc]xgRDwg&tFWpD3Iwt_aAJ7?rVyDXYk#g3QMP.b?Idmy(N(5[gM<)u1LOFuLF6c2fmLeva#EfO5Grbf:+7yXbyfL^CRmTh8tt=XnC6ArMeHp<]4@Y8L5(1kO#y$0IL8RvH=tCkmoBzFNdx9.8u7eBaEO>AHH^[aHsirc=sc_652s)1wTA{U.ayU[jDscP{>:gOxnTBn]AJy9-]^i3[iw_V|ic)bcqtRiQ?2UelW
+dgW[td-8MNf]zL4{:%&J2m<!.9uLaYP7:&QOd#!y]<FZ3[%c?8_S?1PkE43NZ8roZKNiS>KtI:I_E]+6m<TPaG]fvK]e&aJJeEfpyU4mexcnWHg}Wp.mpmqu7Y-b=pWVmqFd=$G+Yon@+OPt&FQcjL+K0#x@ZXs[w-ItQj={o4_>^xAA59T]W<>Qfn+$M6]y$eqMI>?Lw$8n-N7Xe{[EN)=48vrKO@M[Al<D<tfXy+NZK+ZfKS<9Hy^=AJutZKsCP{cAIFe01[EN)=48vrKf$SMWXOU(NO=:iabe6km$wIAX5$Sz%<J9UZ_9ERy4(.V0
+A{YZkOg<iXLD:|W0F:NvKS<8xb]X&^<S#}4#yhSBZpzNMTW6!}x#}$6X|!5OH+qfN[EN)=48vrKs7Ym&z2rrYOq!N>Qz0GYa7:RRm<TPa2(B0bfD.I%=w3qm-v:<RW=AQXf(F?w[8AB948vrKkPy<jSCq{%f$2>yZK+Zfb+a#2Z7Js}dd$QKnrfXdcd=NS<6=ajZpy%|Cp7-PM3cCApHS-9+H9!Vt<o@d)$a(CpBu.RT#1=Gy7iG#k5rbOZw(MN!a?[>TC+EJyW<u&d&DX1kqI^Jb+a!jjS]2p?fpKPNXz0dL:2Y?xYi_]^+XcKt3Ug?
+:1Rf?cW5:|kb4@2pV16OZm(Nec{-CQp=7Xe?}!+4^][}5<6=anZpy%|&Ns9.oubz[!5gBxHT2F%7|}m28_im@y#64k=2|bcCLofrA0!o0E)KrcMb+:<:x}u%?[U7.o]Tlh_9@YA=f>#M<6=b9g9g]m!Cn(sl(?m-#&!.g&6.SxZk:.Y1FokZIs-RHU>wQB!!+H.!$kNZ#&#v7HRf(I$pe6_-f$0qG1ta+P1pJT!!d.u!=<fm-G5=Z<>p+4=haW8nh7#k0?7q]!!4k9!(Vx7$-%nIl$L0m(cJH@7L&<di>kB4!!%d&!#H9m!SRMZ6iET7
+QVb4CTQC1Kb7iuU:WJe=!!DVM!10rI&6+]mZk:.Y1FokZIs-RHU>wQB!!+H.!$kNZ#&#v7HRf(I$pe6_-f$0qG1ta+P1pJT!!d.u!=<fm-G5=Z<>p+4=haW8nh7#k0?7q]!!4k9!(Vx7$-%nIl$L0m(cJH@7L&<di>kB4!!%d&!#H9m!SRMZ6iET7QVb4CTQC1Kb7iuU:WJe=!!DVM!10rI&6+]mZk:.Y1FokZIs-RHU>wQB!!+H.!$kNZ#&#v7HRf(I$pe6_-f$0qG1ta+P1pJT!!d.u!=<fm-G5=Z<>p+4=haW8nh7#k0?7q]!!4k9
+!(Vx7$-%nIl$L0m(cJH@7L&<di>kB4!!%d&!#H9m!SRMZ6iET7QVb4CTQC1Kb7iuU:WJe=!!DVM!10rI&6+]mZk:.Y1FokZIs-RHU>wQB!!+H.!$kNZ#&#v7HRf(I$pe6_-f$0qG1ta+P1pJT!!d.u!=<fm-G5=Z<>p+4=haW8nh7#k0?7q]!!4k9!(Vx7$-%nIl$L0m>S[>MxG|Ba:>MJe!)Ow@>N>gra!k$X!3vZL
+ */
