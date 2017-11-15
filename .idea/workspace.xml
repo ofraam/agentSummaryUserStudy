@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09a7b1f5-4d82-41b0-9b10-5c529e8ae6a6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/allOct9pacman5trajectories_filtered.xlsx" afterPath="$PROJECT_DIR$/results/allOct9pacman5trajectories_filtered.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/summary5AnalysisCorrectRate.sav" afterPath="$PROJECT_DIR$/results/summary5AnalysisCorrectRate.sav" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/turkExpOct15.xlsx" afterPath="$PROJECT_DIR$/results/turkExpOct15.xlsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/agentSummaryExp1AllData.xlsx" afterPath="$PROJECT_DIR$/results/agentSummaryExp1AllData.xlsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/correctnessExp2Plot_new.jpg" afterPath="$PROJECT_DIR$/results/correctnessExp2Plot_new.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/exp1correctnessPlot_v2.jpg" afterPath="$PROJECT_DIR$/results/exp1correctnessPlot_v2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/maxdivAll.xlsx" afterPath="$PROJECT_DIR$/results/maxdivAll.xlsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/preferencesExp1PlotFig.jpg" afterPath="$PROJECT_DIR$/results/preferencesExp1PlotFig.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/agentSummary/agentSummary.html" afterPath="$PROJECT_DIR$/public_html/agentSummary/agentSummary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/confidenceExp1Plot.jrn" afterPath="$PROJECT_DIR$/results/confidenceExp1Plot.jrn" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/confidenceExp2.jrn" afterPath="$PROJECT_DIR$/results/confidenceExp2.jrn" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/correctnessExp2Plot_new.jrn" afterPath="$PROJECT_DIR$/results/correctnessExp2Plot_new.jrn" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/exp1correctnessPlot.jrn" afterPath="$PROJECT_DIR$/results/exp1correctnessPlot.jrn" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/preferencesExp1Plot_box.jrn" afterPath="$PROJECT_DIR$/results/preferencesExp1Plot_box.jrn" />
     </list>
     <ignored path="agentSummaryExperiment.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,10 +37,10 @@
       <file leaf-file-name="agentSummary.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public_html/agentSummary/agentSummary.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="251" column="87" selection-start-line="251" selection-start-column="87" selection-end-line="251" selection-end-column="87" />
+            <state relative-caret-position="675">
+              <caret line="255" column="53" selection-start-line="255" selection-start-column="53" selection-end-line="255" selection-end-column="53" />
               <folding>
-                <element signature="n#style#0;n#span#0;n#h2#0;n#div#0;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#h2#0;n#div#1;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
@@ -123,8 +131,8 @@
         <option value="$PROJECT_DIR$/public_html/agentSummary/todo.txt" />
         <option value="$PROJECT_DIR$/public_html/logger/logger.py" />
         <option value="$PROJECT_DIR$/public_html/logger/credentials.py" />
-        <option value="$PROJECT_DIR$/public_html/agentSummary/agentSummary.html" />
         <option value="$PROJECT_DIR$/public_html/agentSummary/agentSummary.js" />
+        <option value="$PROJECT_DIR$/public_html/agentSummary/agentSummary.html" />
       </list>
     </option>
   </component>
@@ -135,10 +143,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="y" value="1" />
-    <option name="width" value="1365" />
-    <option name="height" value="726" />
+    <option name="x" value="1358" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1092" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -165,7 +173,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -258,6 +265,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -354,17 +362,20 @@
       <workItem from="1508854902230" duration="744000" />
       <workItem from="1509453849179" duration="1805000" />
       <workItem from="1509640784627" duration="5000" />
+      <workItem from="1510563858436" duration="815000" />
+      <workItem from="1510578357545" duration="867000" />
+      <workItem from="1510739446162" duration="22000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46421000" />
+    <option name="totallyTimeSpent" value="48125000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1365" height="726" extended-state="0" />
+    <frame x="1358" y="-8" width="1936" height="1092" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28910303" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2890625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -459,7 +470,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#span#0;n#h2#0;n#div#0;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#h2#0;n#div#1;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
@@ -521,7 +532,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#span#0;n#h2#0;n#div#0;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#h2#0;n#div#1;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
@@ -583,7 +594,7 @@
         <state relative-caret-position="4794">
           <caret line="282" column="50" selection-start-line="282" selection-start-column="50" selection-end-line="282" selection-end-column="50" />
           <folding>
-            <element signature="n#style#0;n#span#0;n#h2#0;n#div#0;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#h2#0;n#div#1;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
@@ -645,7 +656,7 @@
         <state relative-caret-position="4794">
           <caret line="282" column="50" selection-start-line="282" selection-start-column="50" selection-end-line="282" selection-end-column="50" />
           <folding>
-            <element signature="n#style#0;n#span#0;n#h2#0;n#div#0;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#h2#0;n#div#1;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
@@ -707,7 +718,7 @@
         <state relative-caret-position="119">
           <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
           <folding>
-            <element signature="n#style#0;n#span#0;n#h2#0;n#div#0;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#h2#0;n#div#1;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
@@ -823,10 +834,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/agentSummary/agentSummary.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="251" column="87" selection-start-line="251" selection-start-column="87" selection-end-line="251" selection-end-column="87" />
+        <state relative-caret-position="675">
+          <caret line="255" column="53" selection-start-line="255" selection-start-column="53" selection-end-line="255" selection-end-column="53" />
           <folding>
-            <element signature="n#style#0;n#span#0;n#h2#0;n#div#0;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#h2#0;n#div#1;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#4;n#body#0;n#!!top" expanded="true" />
